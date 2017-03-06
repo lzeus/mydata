@@ -1,0 +1,29 @@
+@startuml
+
+title IO read(byte b[])
+
+Client.java -> FileInputStream.java : read(byte b[])
+
+FileInputStream.java -> FileInputStream.java : readBytes(byte b[], int off, int len)
+
+FileInputStream.java -> FileInputStream.c : Java_java_io_FileInputStream_readBytes(JNIEnv *env, jobject this,jbyteArray bytes, jint off, jint len)
+
+FileInputStream.c -> io_util.c : readBytes(JNIEnv *env, jobject this, jbyteArray bytes,jint off, jint len, jfieldID fid)
+
+io_util.c -> io_util_md.c : IO_Read/handleRead(FD fd, void *buf, jint len)
+
+io_util_md.c -> unistd.h : read(int fd, void *buf, size_t count)
+
+io_util_md.c <-- unistd.h : read(int fd, void *buf, size_t count)
+
+io_util.c <-- io_util_md.c : IO_Read/handleRead(FD fd, void *buf, jint len)
+
+FileInputStream.c <-- io_util.c : readBytes(JNIEnv *env, jobject this, jbyteArray bytes,jint off, jint len, jfieldID fid)
+
+FileInputStream.java <-- FileInputStream.c: Java_java_io_FileInputStream_readBytes(JNIEnv *env, jobject this,jbyteArray bytes, jint off, jint len)
+
+FileInputStream.java --> FileInputStream.java : readBytes(byte b[], int off, int len)
+
+Client.java  <-- FileInputStream.java : read(byte b[])
+
+@enduml
