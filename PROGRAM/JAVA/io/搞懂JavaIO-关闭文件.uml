@@ -1,0 +1,25 @@
+@startuml
+
+title 关闭文件
+
+Client.java -> FileInputStream.java : close()
+
+FileInputStream.java -> FileInputStream.java : close0()
+
+FileInputStream.java -> FileInputStream_md.c : Java_java_io_FileInputStream_close0(JNIEnv *env, jobject this)
+
+FileInputStream_md.c -> io_util_md.c : fileClose(JNIEnv *env, jobject this, jfieldID fid)
+
+io_util_md.c -> unistd.h : close(int fd)
+
+io_util_md.c <-- unistd.h : close(int fd)
+
+FileInputStream_md.c <-- io_util_md.c : fileClose(JNIEnv *env, jobject this, jfieldID fid)
+
+FileInputStream.java <-- FileInputStream_md.c : Java_java_io_FileInputStream_close0(JNIEnv *env, jobject this)
+
+FileInputStream.java --> FileInputStream.java : close0()
+
+Client.java  <-- FileInputStream.java : close()
+
+@enduml
