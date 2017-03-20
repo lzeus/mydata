@@ -14,9 +14,9 @@ FileInputStream.c -> io_util_md.c : fileOpen(JNIEnv *env, jobject this, jstring 
 
 io_util_md.c -> io_util_md.c : handleOpen(const char *path, int oflag, int mode)
 
-io_util_md.c -> unistd.h : open64 (const char *filename, int flags[, mode_t mode])
+io_util_md.c -> fcntl.h : open64 (const char *filename, int flags[, mode_t mode])
 
-io_util_md.c <-- unistd.h : open64 (const char *filename, int flags[, mode_t mode])
+io_util_md.c <-- fcntl.h : open64 (const char *filename, int flags[, mode_t mode])
 
 io_util_md.c <-- io_util_md.c : handleOpen(const char *path, int oflag, int mode)
 
