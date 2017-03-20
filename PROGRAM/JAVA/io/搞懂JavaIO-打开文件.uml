@@ -2,13 +2,11 @@
 
 title 打开文件
 
-Client.java -> FileInputStream.java : new FileInputStream(String name)
+SimpleCopy.java -> FileInputStream.java : new FileInputStream(String name)
 
 FileInputStream.java -> FileInputStream.java : FileInputStream(File file)
 
 FileInputStream.java -> FileInputStream.java : open(String name)
-
-FileInputStream.java -> FileInputStream.java : open0(String name)
 
 FileInputStream.java -> FileInputStream.c : Java_java_io_FileInputStream_open(JNIEnv *env, jobject this, jstring path)
 
@@ -26,12 +24,10 @@ FileInputStream.c <-- io_util_md.c : fileOpen(JNIEnv *env, jobject this, jstring
 
 FileInputStream.java <-- FileInputStream.c: Java_java_io_FileInputStream_open(JNIEnv *env, jobject this, jstring path)
 
-FileInputStream.java --> FileInputStream.java : open0(String name)
+FileInputStream.java <-- FileInputStream.java : open(String name)
 
-FileInputStream.java --> FileInputStream.java : open(String name)
+FileInputStream.java <-- FileInputStream.java : FileInputStream(File file)
 
-FileInputStream.java --> FileInputStream.java : FileInputStream(File file)
-
-Client.java  <-- FileInputStream.java : new FileInputStream(String name)
+SimpleCopy.java  <-- FileInputStream.java : new FileInputStream(String name)
 
 @enduml
