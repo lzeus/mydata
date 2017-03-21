@@ -1,0 +1,1587 @@
+Last login: Wed Aug 31 09:36:42 on ttys003
+lzeusdeMacBook-Pro:cop lzeus$ sudo vi /etc/hosts
+Password:
+lzeusdeMacBook-Pro:cop lzeus$ ll
+total 40
+drwxr-xr-x  11 lzeus  staff   374B  8 30 11:42 .
+drwxr-xr-x   7 lzeus  staff   238B  8 26 20:31 ..
+drwxr-xr-x  16 lzeus  staff   544B  8 31 22:04 .git
+-rw-r--r--   1 lzeus  staff   192B  8 26 13:44 .gitignore
+drwxr-xr-x   8 lzeus  staff   272B  8 31 22:05 .idea
+-rw-r--r--   1 lzeus  staff   256B  8 26 13:44 abc.json
+-rw-r--r--   1 lzeus  staff   335B  8 26 18:03 cop.iml
+-rw-r--r--   1 lzeus  staff   366B  8 26 13:44 home.html
+drwxr-xr-x  50 lzeus  staff   1.7K  8 31 09:35 node_modules
+-rw-r--r--   1 lzeus  staff   638B  8 26 13:44 package.json
+drwxr-xr-x   5 lzeus  staff   170B  8 26 13:44 src
+lzeusdeMacBook-Pro:cop lzeus$ cd node_modules/
+lzeusdeMacBook-Pro:node_modules lzeus$ ll
+total 0
+drwxr-xr-x  50 lzeus  staff   1.7K  8 31 09:35 .
+drwxr-xr-x  11 lzeus  staff   374B  8 30 11:42 ..
+drwxr-xr-x   3 lzeus  staff   102B  8 30 11:42 .bin
+drwxr-xr-x  27 lzeus  staff   918B  8 31 09:35 @ali
+drwxr-xr-x  10 lzeus  staff   340B  8 30 11:42 asap
+drwxr-xr-x   6 lzeus  staff   204B  8 30 11:42 async-validator
+drwxr-xr-x   7 lzeus  staff   238B  8 30 11:42 classlist-polyfill
+drwxr-xr-x  11 lzeus  staff   374B  8 30 11:42 classnames
+drwxr-xr-x   9 lzeus  staff   306B  8 30 11:42 component-classes
+drwxr-xr-x  10 lzeus  staff   340B  8 30 11:42 component-indexof
+drwxr-xr-x   7 lzeus  staff   238B  8 30 11:42 core-decorators
+drwxr-xr-x  20 lzeus  staff   680B  8 30 11:42 core-js
+drwxr-xr-x   7 lzeus  staff   238B  8 30 11:42 cropperjs
+drwxr-xr-x   6 lzeus  staff   204B  8 30 11:42 css-animation
+drwxr-xr-x   6 lzeus  staff   204B  8 30 11:42 deep-assign
+drwxr-xr-x   5 lzeus  staff   170B  8 30 11:42 def
+drwxr-xr-x   9 lzeus  staff   306B  8 30 11:42 encoding
+drwxr-xr-x  14 lzeus  staff   476B  8 30 11:42 enquire.js
+drwxr-xr-x  11 lzeus  staff   374B  8 30 11:42 fbjs
+drwxr-xr-x   6 lzeus  staff   204B  8 30 11:42 for-in
+drwxr-xr-x   6 lzeus  staff   204B  8 30 11:42 for-own
+drwxr-xr-x  11 lzeus  staff   374B  8 30 11:42 html5-history-api
+drwxr-xr-x  10 lzeus  staff   340B  8 30 11:42 iconv-lite
+drwxr-xr-x   8 lzeus  staff   272B  8 30 11:42 immutable
+drwxr-xr-x   6 lzeus  staff   204B  8 30 11:42 is-extendable
+drwxr-xr-x   6 lzeus  staff   204B  8 30 11:42 is-obj
+drwxr-xr-x   6 lzeus  staff   204B  8 30 11:42 is-stream
+drwxr-xr-x  14 lzeus  staff   476B  8 30 11:42 isomorphic-fetch
+drwxr-xr-x  10 lzeus  staff   340B  8 30 11:42 jquery
+drwxr-xr-x   7 lzeus  staff   238B  8 30 11:42 js-tokens
+drwxr-xr-x   6 lzeus  staff   204B  8 30 11:42 lodash.assign
+drwxr-xr-x   6 lzeus  staff   204B  8 30 11:42 lodash.keys
+drwxr-xr-x   6 lzeus  staff   204B  8 30 11:42 lodash.merge
+drwxr-xr-x   6 lzeus  staff   204B  8 30 11:42 lodash.rest
+drwxr-xr-x  10 lzeus  staff   340B  8 30 11:42 loose-envify
+drwxr-xr-x  14 lzeus  staff   476B  8 30 11:42 moment
+drwxr-xr-x  12 lzeus  staff   408B  8 30 11:42 node-fetch
+drwxr-xr-x   6 lzeus  staff   204B  8 30 11:42 object-assign
+drwxr-xr-x   6 lzeus  staff   204B  8 30 11:42 object.omit
+drwxr-xr-x  16 lzeus  staff   544B  8 30 11:42 promise
+drwxr-xr-x   5 lzeus  staff   170B  8 30 11:42 querystringify
+drwxr-xr-x   6 lzeus  staff   204B  8 30 11:42 rc-animate
+drwxr-xr-x   9 lzeus  staff   306B  8 30 11:42 react
+drwxr-xr-x   7 lzeus  staff   238B  8 30 11:42 react-addons-pure-render-mixin
+drwxr-xr-x   9 lzeus  staff   306B  8 30 11:42 react-mixin
+drwxr-xr-x   9 lzeus  staff   306B  8 30 11:42 requires-port
+drwxr-xr-x   8 lzeus  staff   272B  8 30 11:42 smart-mixin
+drwxr-xr-x  13 lzeus  staff   442B  8 30 11:42 ua-parser-js
+drwxr-xr-x   6 lzeus  staff   204B  8 30 11:42 url-parse
+drwxr-xr-x   6 lzeus  staff   204B  8 30 11:42 whatwg-fetch
+lzeusdeMacBook-Pro:node_modules lzeus$ cd \@ali/
+lzeusdeMacBook-Pro:@ali lzeus$ ll
+total 0
+drwxr-xr-x  27 lzeus  staff   918B  8 31 09:35 .
+drwxr-xr-x  50 lzeus  staff   1.7K  8 31 09:35 ..
+drwxr-xr-x  13 lzeus  staff   442B  8 31 09:35 ice
+drwxr-xr-x   5 lzeus  staff   170B  8 30 11:42 ice-affix
+drwxr-xr-x   6 lzeus  staff   204B  8 30 11:42 ice-bind
+drwxr-xr-x   6 lzeus  staff   204B  8 30 11:42 ice-ellipsis
+drwxr-xr-x   6 lzeus  staff   204B  8 30 11:42 ice-form-separator
+drwxr-xr-x   5 lzeus  staff   170B  8 30 11:42 ice-icon
+drwxr-xr-x   5 lzeus  staff   170B  8 30 11:42 ice-layout
+drwxr-xr-x   6 lzeus  staff   204B  8 30 11:42 ice-staff-selector
+drwxr-xr-x   6 lzeus  staff   204B  8 30 11:42 ice-transfer
+drwxr-xr-x   6 lzeus  staff   204B  8 30 11:42 ice-url-changer
+drwxr-xr-x  13 lzeus  staff   442B  8 30 11:42 kissy-cookie
+drwxr-xr-x  15 lzeus  staff   510B  8 30 11:42 kissy-dom-base
+drwxr-xr-x  15 lzeus  staff   510B  8 30 11:42 kissy-feature
+drwxr-xr-x  16 lzeus  staff   544B  8 30 11:42 kissy-io
+drwxr-xr-x  14 lzeus  staff   476B  8 30 11:42 kissy-io-base
+drwxr-xr-x  12 lzeus  staff   408B  8 30 11:42 kissy-io-extra
+drwxr-xr-x  14 lzeus  staff   476B  8 30 11:42 kissy-io-form
+drwxr-xr-x  14 lzeus  staff   476B  8 30 11:42 kissy-io-script
+drwxr-xr-x  16 lzeus  staff   544B  8 30 11:42 kissy-path
+drwxr-xr-x  15 lzeus  staff   510B  8 30 11:42 kissy-promise
+drwxr-xr-x   9 lzeus  staff   306B  8 30 11:42 kissy-query-selector-base
+drwxr-xr-x  13 lzeus  staff   442B  8 30 11:42 kissy-querystring
+drwxr-xr-x  15 lzeus  staff   510B  8 30 11:42 kissy-url
+drwxr-xr-x  14 lzeus  staff   476B  8 30 11:42 kissy-util-base
+drwxr-xr-x  14 lzeus  staff   476B  8 30 11:42 kissy-util-extra
+lzeusdeMacBook-Pro:@ali lzeus$ cd ice-bind/
+lzeusdeMacBook-Pro:ice-bind lzeus$ ll
+total 24
+drwxr-xr-x   6 lzeus  staff   204B  8 30 11:42 .
+drwxr-xr-x  27 lzeus  staff   918B  8 31 09:35 ..
+-rw-r--r--   1 lzeus  staff    86B  7 22 12:59 History.md
+-rw-r--r--   1 lzeus  staff   2.4K  7 22 17:14 README.md
+drwxr-xr-x   5 lzeus  staff   170B  8 30 11:42 lib
+-rw-r--r--   1 lzeus  staff   2.3K  8 30 11:42 package.json
+lzeusdeMacBook-Pro:ice-bind lzeus$ cd lib/
+lzeusdeMacBook-Pro:lib lzeus$ ll
+total 32
+drwxr-xr-x  5 lzeus  staff   170B  8 30 11:42 .
+drwxr-xr-x  6 lzeus  staff   204B  8 30 11:42 ..
+-rw-r--r--  1 lzeus  staff   1.9K  7 25 17:52 ajax.js
+-rw-r--r--  1 lzeus  staff   5.5K  7 25 17:52 index.js
+-rw-r--r--  1 lzeus  staff   181B  7 25 17:52 index.scss
+lzeusdeMacBook-Pro:lib lzeus$ view ./ajax.js 
+lzeusdeMacBook-Pro:lib lzeus$ 
+lzeusdeMacBook-Pro:lib lzeus$ 
+lzeusdeMacBook-Pro:lib lzeus$ 
+lzeusdeMacBook-Pro:lib lzeus$ man ssh_config
+lzeusdeMacBook-Pro:lib lzeus$ 
+lzeusdeMacBook-Pro:lib lzeus$ 
+lzeusdeMacBook-Pro:lib lzeus$ 
+lzeusdeMacBook-Pro:lib lzeus$ cd
+lzeusdeMacBook-Pro:~ lzeus$ cd
+lzeusdeMacBook-Pro:~ lzeus$ cd
+lzeusdeMacBook-Pro:~ lzeus$ cd
+lzeusdeMacBook-Pro:~ lzeus$ cd
+lzeusdeMacBook-Pro:~ lzeus$ ll
+total 17128
+drwxr-xr-x+  62 lzeus  staff   2.1K  9  1 09:49 .
+drwxr-xr-x    5 root   admin   170B  7 18 15:08 ..
+-r--------    1 lzeus  staff     9B  7 18 15:08 .CFUserTextEncoding
+-rw-r--r--@   1 lzeus  staff    42K  9  1 07:55 .DS_Store
+drwx------    2 lzeus  staff    68B  8 30 10:01 .Trash
+drwxr-xr-x    4 lzeus  staff   136B  7 26 11:17 .android
+-rw-r--r--    1 lzeus  staff   4.3K  9  1 08:30 .bash_history
+-rw-r--r--    1 lzeus  staff   141B  7 20 14:56 .bash_profile
+drwxr-xr-x   74 lzeus  staff   2.5K  9  1 08:30 .bash_sessions
+drwxr-xr-x    4 lzeus  staff   136B  8 29 14:39 .config
+drwxr-xr-x   10 lzeus  staff   340B  8 30 14:15 .def
+drwxr-xr-x    6 lzeus  staff   204B  7 19 17:51 .eclipse
+-rw-r--r--    1 lzeus  staff   152B  8 29 09:22 .gitconfig
+-rw-------    1 lzeus  staff    65B  9  1 11:13 .lesshst
+drwxr-xr-x    6 lzeus  staff   204B  7 27 20:07 .m2
+drwxr-xr-x    3 lzeus  staff   102B  7 26 16:38 .node-gyp
+drwxr-xr-x  225 lzeus  staff   7.5K  7 27 16:13 .npm
+-rw-r--r--    1 lzeus  staff    77B  8 30 11:17 .npm_updater.json
+drwxr-xr-x    3 lzeus  staff   102B  7 27 14:30 .npminstall_tarball
+drwxr-xr-x    4 lzeus  staff   136B  7 19 11:00 .oracle_jre_usage
+drwxr-xr-x    5 lzeus  staff   170B  8 26 18:01 .p2
+drwx------    3 lzeus  staff   102B  8 29 22:36 .putty
+drwxr-xr-x    8 lzeus  staff   272B  9  1 08:35 .ssh
+drwxr-xr-x    2 root   staff    68B  9  1 09:42 .tnpm
+drwxr-xr-x    2 lzeus  staff    68B  9  1 10:38 .tnpm_tmp
+-rw-r--r--    1 lzeus  staff    29B  7 26 16:35 .tnpmrc
+-rw-r--r--    1 lzeus  staff   8.0K  7 27 15:06 .v8flags.4.5.103.36.lzeus.json
+-rw-r--r--    1 lzeus  staff   8.0K  7 28 11:56 .v8flags.4.5.103.36.root.json
+drwxr-xr-x    3 lzeus  staff   102B  7 25 16:37 .vim
+-rw-------    1 lzeus  staff   6.9K  9  1 08:36 .viminfo
+drwxr-xr-x    4 lzeus  staff   136B  8 26 08:49 .yunpan
+drwx------    6 lzeus  staff   204B  8 30 10:13 Applications
+drwx------+   9 lzeus  staff   306B  8 30 10:01 Desktop
+drwx------+  10 lzeus  staff   340B  8 11 20:05 Documents
+drwx------+  49 lzeus  staff   1.6K  8 30 10:01 Downloads
+drwxr-xr-x   15 lzeus  staff   510B  8  5 13:06 JAVA_WORK
+drwx------@  53 lzeus  staff   1.8K  7 22 17:46 Library
+drwx------+   3 lzeus  staff   102B  7 18 15:08 Movies
+drwx------+   6 lzeus  staff   204B  8  3 14:42 Music
+drwx------+   3 lzeus  staff   102B  7 18 15:08 Pictures
+drwxr-xr-x+   5 lzeus  staff   170B  7 18 15:08 Public
+drwxr-xr-x   11 lzeus  staff   374B  8 30 11:23 REACT_WORK
+drwxr-xr-x    5 lzeus  staff   170B  8  1 20:52 VirtualBox VMs
+-rw-r--r--    1 lzeus  staff   186B  8  5 10:16 antx.properties
+drwxr-xr-x@  10 lzeus  staff   340B  7 20 16:49 apache-maven-3.2.5
+-rw-r--r--@   1 lzeus  staff   7.6M  7 20 11:30 apache-maven-3.2.5-bin.tar.gz
+-rw-r--r--    1 lzeus  staff   121K  8 29 14:46 common-1.0.0-SNAPSHOT.jar
+-rw-r--r--    1 lzeus  staff    48K  8 29 14:41 common-1.3.3.jar
+-rw-r--r--    1 lzeus  staff    38K  8 29 14:43 common-dao-1.0.1.jar
+drwxr-xr-x    3 lzeus  staff   102B  8  5 13:12 configclient
+-rw-r--r--    1 lzeus  staff   121K  8 29 14:47 core-1.0.0-SNAPSHOT.jar
+drwxr-xr-x    5 lzeus  staff   170B  8  4 06:37 diamond
+drwxr-xr-x    7 lzeus  staff   238B  8 26 20:31 git
+drwxr-xr-x   18 lzeus  staff   612B  8 26 10:51 logs
+drwxr-xr-x   21 lzeus  staff   714B  8 29 08:55 mydata
+-rw-r--r--    1 lzeus  staff    40K  8 31 21:01 nucc.log
+-rw-r--r--    1 lzeus  staff    85K  8 29 14:44 services-1.0.0-SNAPSHOT.jar
+drwxr-xr-x    3 lzeus  staff   102B  7 27 14:41 tempdir
+drwxr-xr-x    8 lzeus  staff   272B  7 26 11:32 test_idea_dir
+drwxr-xr-x    2 lzeus  staff    68B  8  5 13:12 vipsrv-logs
+drwxr-xr-x   15 lzeus  staff   510B  8 31 13:55 work
+-rw-r--r--@   1 lzeus  staff   205K  8 11 20:02 运营平台技术文档_COP_MANAGE.pdf
+lzeusdeMacBook-Pro:~ lzeus$ sudo vi /etc/hosts
+Password:
+Sorry, try again.
+Password:
+lzeusdeMacBook-Pro:~ lzeus$ sudo vi /etc/hosts
+lzeusdeMacBook-Pro:~ lzeus$ ping copweb.daily.taobao.net
+PING copweb.daily.taobao.net (100.69.163.158): 56 data bytes
+64 bytes from 100.69.163.158: icmp_seq=0 ttl=57 time=4.366 ms
+64 bytes from 100.69.163.158: icmp_seq=1 ttl=57 time=3.929 ms
+64 bytes from 100.69.163.158: icmp_seq=2 ttl=57 time=3.952 ms
+64 bytes from 100.69.163.158: icmp_seq=3 ttl=57 time=9.358 ms
+64 bytes from 100.69.163.158: icmp_seq=4 ttl=57 time=4.141 ms
+64 bytes from 100.69.163.158: icmp_seq=5 ttl=57 time=3.574 ms
+64 bytes from 100.69.163.158: icmp_seq=6 ttl=57 time=3.829 ms
+64 bytes from 100.69.163.158: icmp_seq=7 ttl=57 time=4.613 ms
+^C
+--- copweb.daily.taobao.net ping statistics ---
+8 packets transmitted, 8 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 3.574/4.720/9.358/1.779 ms
+lzeusdeMacBook-Pro:~ lzeus$ 
+lzeusdeMacBook-Pro:~ lzeus$ 
+lzeusdeMacBook-Pro:~ lzeus$ sudo vi /etc/hosts
+lzeusdeMacBook-Pro:~ lzeus$ top
+lzeusdeMacBook-Pro:~ lzeus$ 
+lzeusdeMacBook-Pro:~ lzeus$ 
+lzeusdeMacBook-Pro:~ lzeus$ 
+lzeusdeMacBook-Pro:~ lzeus$ 
+lzeusdeMacBook-Pro:~ lzeus$ 
+lzeusdeMacBook-Pro:~ lzeus$ cd
+lzeusdeMacBook-Pro:~ lzeus$ cd
+lzeusdeMacBook-Pro:~ lzeus$ cd
+lzeusdeMacBook-Pro:~ lzeus$ cd
+lzeusdeMacBook-Pro:~ lzeus$ cd
+lzeusdeMacBook-Pro:~ lzeus$ cd
+lzeusdeMacBook-Pro:~ lzeus$ cd
+lzeusdeMacBook-Pro:~ lzeus$ cd
+lzeusdeMacBook-Pro:~ lzeus$ ll
+total 17128
+drwxr-xr-x+  62 lzeus  staff   2.1K  9  1 11:44 .
+drwxr-xr-x    5 root   admin   170B  7 18 15:08 ..
+-r--------    1 lzeus  staff     9B  7 18 15:08 .CFUserTextEncoding
+-rw-r--r--@   1 lzeus  staff    42K  9  1 07:55 .DS_Store
+drwx------    2 lzeus  staff    68B  8 30 10:01 .Trash
+drwxr-xr-x    4 lzeus  staff   136B  7 26 11:17 .android
+-rw-r--r--    1 lzeus  staff   4.3K  9  1 08:30 .bash_history
+-rw-r--r--    1 lzeus  staff   141B  7 20 14:56 .bash_profile
+drwxr-xr-x   74 lzeus  staff   2.5K  9  1 08:30 .bash_sessions
+drwxr-xr-x    4 lzeus  staff   136B  8 29 14:39 .config
+drwxr-xr-x   10 lzeus  staff   340B  8 30 14:15 .def
+drwxr-xr-x    6 lzeus  staff   204B  7 19 17:51 .eclipse
+-rw-r--r--    1 lzeus  staff   152B  8 29 09:22 .gitconfig
+-rw-------    1 lzeus  staff    65B  9  1 11:13 .lesshst
+drwxr-xr-x    6 lzeus  staff   204B  7 27 20:07 .m2
+drwxr-xr-x    3 lzeus  staff   102B  7 26 16:38 .node-gyp
+drwxr-xr-x  225 lzeus  staff   7.5K  7 27 16:13 .npm
+-rw-r--r--    1 lzeus  staff    77B  8 30 11:17 .npm_updater.json
+drwxr-xr-x    3 lzeus  staff   102B  7 27 14:30 .npminstall_tarball
+drwxr-xr-x    4 lzeus  staff   136B  7 19 11:00 .oracle_jre_usage
+drwxr-xr-x    5 lzeus  staff   170B  8 26 18:01 .p2
+drwx------    3 lzeus  staff   102B  8 29 22:36 .putty
+drwxr-xr-x    8 lzeus  staff   272B  9  1 08:35 .ssh
+drwxr-xr-x    2 root   staff    68B  9  1 09:42 .tnpm
+drwxr-xr-x    2 lzeus  staff    68B  9  1 10:38 .tnpm_tmp
+-rw-r--r--    1 lzeus  staff    29B  7 26 16:35 .tnpmrc
+-rw-r--r--    1 lzeus  staff   8.0K  7 27 15:06 .v8flags.4.5.103.36.lzeus.json
+-rw-r--r--    1 lzeus  staff   8.0K  7 28 11:56 .v8flags.4.5.103.36.root.json
+drwxr-xr-x    3 lzeus  staff   102B  7 25 16:37 .vim
+-rw-------    1 lzeus  staff   6.9K  9  1 11:44 .viminfo
+drwxr-xr-x    4 lzeus  staff   136B  8 26 08:49 .yunpan
+drwx------    6 lzeus  staff   204B  8 30 10:13 Applications
+drwx------+   9 lzeus  staff   306B  8 30 10:01 Desktop
+drwx------+  10 lzeus  staff   340B  8 11 20:05 Documents
+drwx------+  49 lzeus  staff   1.6K  8 30 10:01 Downloads
+drwxr-xr-x   15 lzeus  staff   510B  8  5 13:06 JAVA_WORK
+drwx------@  53 lzeus  staff   1.8K  7 22 17:46 Library
+drwx------+   3 lzeus  staff   102B  7 18 15:08 Movies
+drwx------+   6 lzeus  staff   204B  8  3 14:42 Music
+drwx------+   3 lzeus  staff   102B  7 18 15:08 Pictures
+drwxr-xr-x+   5 lzeus  staff   170B  7 18 15:08 Public
+drwxr-xr-x   11 lzeus  staff   374B  8 30 11:23 REACT_WORK
+drwxr-xr-x    5 lzeus  staff   170B  8  1 20:52 VirtualBox VMs
+-rw-r--r--    1 lzeus  staff   186B  8  5 10:16 antx.properties
+drwxr-xr-x@  10 lzeus  staff   340B  7 20 16:49 apache-maven-3.2.5
+-rw-r--r--@   1 lzeus  staff   7.6M  7 20 11:30 apache-maven-3.2.5-bin.tar.gz
+-rw-r--r--    1 lzeus  staff   121K  8 29 14:46 common-1.0.0-SNAPSHOT.jar
+-rw-r--r--    1 lzeus  staff    48K  8 29 14:41 common-1.3.3.jar
+-rw-r--r--    1 lzeus  staff    38K  8 29 14:43 common-dao-1.0.1.jar
+drwxr-xr-x    3 lzeus  staff   102B  8  5 13:12 configclient
+-rw-r--r--    1 lzeus  staff   121K  8 29 14:47 core-1.0.0-SNAPSHOT.jar
+drwxr-xr-x    5 lzeus  staff   170B  8  4 06:37 diamond
+drwxr-xr-x    7 lzeus  staff   238B  8 26 20:31 git
+drwxr-xr-x   18 lzeus  staff   612B  8 26 10:51 logs
+drwxr-xr-x   21 lzeus  staff   714B  8 29 08:55 mydata
+-rw-r--r--    1 lzeus  staff    44K  9  1 11:43 nucc.log
+-rw-r--r--    1 lzeus  staff    85K  8 29 14:44 services-1.0.0-SNAPSHOT.jar
+drwxr-xr-x    3 lzeus  staff   102B  7 27 14:41 tempdir
+drwxr-xr-x    8 lzeus  staff   272B  7 26 11:32 test_idea_dir
+drwxr-xr-x    2 lzeus  staff    68B  8  5 13:12 vipsrv-logs
+drwxr-xr-x   15 lzeus  staff   510B  8 31 13:55 work
+-rw-r--r--@   1 lzeus  staff   205K  8 11 20:02 运营平台技术文档_COP_MANAGE.pdf
+lzeusdeMacBook-Pro:~ lzeus$ ll
+total 17128
+drwxr-xr-x+  62 lzeus  staff   2.1K  9  1 11:44 .
+drwxr-xr-x    5 root   admin   170B  7 18 15:08 ..
+-r--------    1 lzeus  staff     9B  7 18 15:08 .CFUserTextEncoding
+-rw-r--r--@   1 lzeus  staff    42K  9  1 07:55 .DS_Store
+drwx------    2 lzeus  staff    68B  8 30 10:01 .Trash
+drwxr-xr-x    4 lzeus  staff   136B  7 26 11:17 .android
+-rw-r--r--    1 lzeus  staff   4.3K  9  1 08:30 .bash_history
+-rw-r--r--    1 lzeus  staff   141B  7 20 14:56 .bash_profile
+drwxr-xr-x   74 lzeus  staff   2.5K  9  1 08:30 .bash_sessions
+drwxr-xr-x    4 lzeus  staff   136B  8 29 14:39 .config
+drwxr-xr-x   10 lzeus  staff   340B  8 30 14:15 .def
+drwxr-xr-x    6 lzeus  staff   204B  7 19 17:51 .eclipse
+-rw-r--r--    1 lzeus  staff   152B  8 29 09:22 .gitconfig
+-rw-------    1 lzeus  staff    65B  9  1 11:13 .lesshst
+drwxr-xr-x    6 lzeus  staff   204B  7 27 20:07 .m2
+drwxr-xr-x    3 lzeus  staff   102B  7 26 16:38 .node-gyp
+drwxr-xr-x  225 lzeus  staff   7.5K  7 27 16:13 .npm
+-rw-r--r--    1 lzeus  staff    77B  8 30 11:17 .npm_updater.json
+drwxr-xr-x    3 lzeus  staff   102B  7 27 14:30 .npminstall_tarball
+drwxr-xr-x    4 lzeus  staff   136B  7 19 11:00 .oracle_jre_usage
+drwxr-xr-x    5 lzeus  staff   170B  8 26 18:01 .p2
+drwx------    3 lzeus  staff   102B  8 29 22:36 .putty
+drwxr-xr-x    8 lzeus  staff   272B  9  1 08:35 .ssh
+drwxr-xr-x    2 root   staff    68B  9  1 09:42 .tnpm
+drwxr-xr-x    2 lzeus  staff    68B  9  1 10:38 .tnpm_tmp
+-rw-r--r--    1 lzeus  staff    29B  7 26 16:35 .tnpmrc
+-rw-r--r--    1 lzeus  staff   8.0K  7 27 15:06 .v8flags.4.5.103.36.lzeus.json
+-rw-r--r--    1 lzeus  staff   8.0K  7 28 11:56 .v8flags.4.5.103.36.root.json
+drwxr-xr-x    3 lzeus  staff   102B  7 25 16:37 .vim
+-rw-------    1 lzeus  staff   6.9K  9  1 11:44 .viminfo
+drwxr-xr-x    4 lzeus  staff   136B  8 26 08:49 .yunpan
+drwx------    6 lzeus  staff   204B  8 30 10:13 Applications
+drwx------+   9 lzeus  staff   306B  8 30 10:01 Desktop
+drwx------+  10 lzeus  staff   340B  8 11 20:05 Documents
+drwx------+  49 lzeus  staff   1.6K  8 30 10:01 Downloads
+drwxr-xr-x   15 lzeus  staff   510B  8  5 13:06 JAVA_WORK
+drwx------@  53 lzeus  staff   1.8K  7 22 17:46 Library
+drwx------+   3 lzeus  staff   102B  7 18 15:08 Movies
+drwx------+   6 lzeus  staff   204B  8  3 14:42 Music
+drwx------+   3 lzeus  staff   102B  7 18 15:08 Pictures
+drwxr-xr-x+   5 lzeus  staff   170B  7 18 15:08 Public
+drwxr-xr-x   11 lzeus  staff   374B  8 30 11:23 REACT_WORK
+drwxr-xr-x    5 lzeus  staff   170B  8  1 20:52 VirtualBox VMs
+-rw-r--r--    1 lzeus  staff   186B  8  5 10:16 antx.properties
+drwxr-xr-x@  10 lzeus  staff   340B  7 20 16:49 apache-maven-3.2.5
+-rw-r--r--@   1 lzeus  staff   7.6M  7 20 11:30 apache-maven-3.2.5-bin.tar.gz
+-rw-r--r--    1 lzeus  staff   121K  8 29 14:46 common-1.0.0-SNAPSHOT.jar
+-rw-r--r--    1 lzeus  staff    48K  8 29 14:41 common-1.3.3.jar
+-rw-r--r--    1 lzeus  staff    38K  8 29 14:43 common-dao-1.0.1.jar
+drwxr-xr-x    3 lzeus  staff   102B  8  5 13:12 configclient
+-rw-r--r--    1 lzeus  staff   121K  8 29 14:47 core-1.0.0-SNAPSHOT.jar
+drwxr-xr-x    5 lzeus  staff   170B  8  4 06:37 diamond
+drwxr-xr-x    7 lzeus  staff   238B  8 26 20:31 git
+drwxr-xr-x   18 lzeus  staff   612B  8 26 10:51 logs
+drwxr-xr-x   21 lzeus  staff   714B  8 29 08:55 mydata
+-rw-r--r--    1 lzeus  staff    44K  9  1 11:43 nucc.log
+-rw-r--r--    1 lzeus  staff    85K  8 29 14:44 services-1.0.0-SNAPSHOT.jar
+drwxr-xr-x    3 lzeus  staff   102B  7 27 14:41 tempdir
+drwxr-xr-x    8 lzeus  staff   272B  7 26 11:32 test_idea_dir
+drwxr-xr-x    2 lzeus  staff    68B  8  5 13:12 vipsrv-logs
+drwxr-xr-x   15 lzeus  staff   510B  8 31 13:55 work
+-rw-r--r--@   1 lzeus  staff   205K  8 11 20:02 运营平台技术文档_COP_MANAGE.pdf
+lzeusdeMacBook-Pro:~ lzeus$ ls
+Applications				Music					apache-maven-3.2.5-bin.tar.gz		git					vipsrv-logs
+Desktop					Pictures				common-1.0.0-SNAPSHOT.jar		logs					work
+Documents				Public					common-1.3.3.jar			mydata					运营平台技术文档_COP_MANAGE.pdf
+Downloads				REACT_WORK				common-dao-1.0.1.jar			nucc.log
+JAVA_WORK				VirtualBox VMs				configclient				services-1.0.0-SNAPSHOT.jar
+Library					antx.properties				core-1.0.0-SNAPSHOT.jar			tempdir
+Movies					apache-maven-3.2.5			diamond					test_idea_dir
+lzeusdeMacBook-Pro:~ lzeus$ cd
+lzeusdeMacBook-Pro:~ lzeus$ ll
+total 17128
+drwxr-xr-x+  62 lzeus  staff   2.1K  9  1 11:44 .
+drwxr-xr-x    5 root   admin   170B  7 18 15:08 ..
+-r--------    1 lzeus  staff     9B  7 18 15:08 .CFUserTextEncoding
+-rw-r--r--@   1 lzeus  staff    42K  9  1 07:55 .DS_Store
+drwx------    2 lzeus  staff    68B  8 30 10:01 .Trash
+drwxr-xr-x    4 lzeus  staff   136B  7 26 11:17 .android
+-rw-r--r--    1 lzeus  staff   4.3K  9  1 08:30 .bash_history
+-rw-r--r--    1 lzeus  staff   141B  7 20 14:56 .bash_profile
+drwxr-xr-x   74 lzeus  staff   2.5K  9  1 08:30 .bash_sessions
+drwxr-xr-x    4 lzeus  staff   136B  8 29 14:39 .config
+drwxr-xr-x   10 lzeus  staff   340B  8 30 14:15 .def
+drwxr-xr-x    6 lzeus  staff   204B  7 19 17:51 .eclipse
+-rw-r--r--    1 lzeus  staff   152B  8 29 09:22 .gitconfig
+-rw-------    1 lzeus  staff    65B  9  1 11:13 .lesshst
+drwxr-xr-x    6 lzeus  staff   204B  7 27 20:07 .m2
+drwxr-xr-x    3 lzeus  staff   102B  7 26 16:38 .node-gyp
+drwxr-xr-x  225 lzeus  staff   7.5K  7 27 16:13 .npm
+-rw-r--r--    1 lzeus  staff    77B  8 30 11:17 .npm_updater.json
+drwxr-xr-x    3 lzeus  staff   102B  7 27 14:30 .npminstall_tarball
+drwxr-xr-x    4 lzeus  staff   136B  7 19 11:00 .oracle_jre_usage
+drwxr-xr-x    5 lzeus  staff   170B  8 26 18:01 .p2
+drwx------    3 lzeus  staff   102B  8 29 22:36 .putty
+drwxr-xr-x    8 lzeus  staff   272B  9  1 08:35 .ssh
+drwxr-xr-x    2 root   staff    68B  9  1 09:42 .tnpm
+drwxr-xr-x    2 lzeus  staff    68B  9  1 10:38 .tnpm_tmp
+-rw-r--r--    1 lzeus  staff    29B  7 26 16:35 .tnpmrc
+-rw-r--r--    1 lzeus  staff   8.0K  7 27 15:06 .v8flags.4.5.103.36.lzeus.json
+-rw-r--r--    1 lzeus  staff   8.0K  7 28 11:56 .v8flags.4.5.103.36.root.json
+drwxr-xr-x    3 lzeus  staff   102B  7 25 16:37 .vim
+-rw-------    1 lzeus  staff   6.9K  9  1 11:44 .viminfo
+drwxr-xr-x    4 lzeus  staff   136B  8 26 08:49 .yunpan
+drwx------    6 lzeus  staff   204B  8 30 10:13 Applications
+drwx------+   9 lzeus  staff   306B  8 30 10:01 Desktop
+drwx------+  10 lzeus  staff   340B  8 11 20:05 Documents
+drwx------+  49 lzeus  staff   1.6K  8 30 10:01 Downloads
+drwxr-xr-x   15 lzeus  staff   510B  8  5 13:06 JAVA_WORK
+drwx------@  53 lzeus  staff   1.8K  7 22 17:46 Library
+drwx------+   3 lzeus  staff   102B  7 18 15:08 Movies
+drwx------+   6 lzeus  staff   204B  8  3 14:42 Music
+drwx------+   3 lzeus  staff   102B  7 18 15:08 Pictures
+drwxr-xr-x+   5 lzeus  staff   170B  7 18 15:08 Public
+drwxr-xr-x   11 lzeus  staff   374B  8 30 11:23 REACT_WORK
+drwxr-xr-x    5 lzeus  staff   170B  8  1 20:52 VirtualBox VMs
+-rw-r--r--    1 lzeus  staff   186B  8  5 10:16 antx.properties
+drwxr-xr-x@  10 lzeus  staff   340B  7 20 16:49 apache-maven-3.2.5
+-rw-r--r--@   1 lzeus  staff   7.6M  7 20 11:30 apache-maven-3.2.5-bin.tar.gz
+-rw-r--r--    1 lzeus  staff   121K  8 29 14:46 common-1.0.0-SNAPSHOT.jar
+-rw-r--r--    1 lzeus  staff    48K  8 29 14:41 common-1.3.3.jar
+-rw-r--r--    1 lzeus  staff    38K  8 29 14:43 common-dao-1.0.1.jar
+drwxr-xr-x    3 lzeus  staff   102B  8  5 13:12 configclient
+-rw-r--r--    1 lzeus  staff   121K  8 29 14:47 core-1.0.0-SNAPSHOT.jar
+drwxr-xr-x    5 lzeus  staff   170B  8  4 06:37 diamond
+drwxr-xr-x    7 lzeus  staff   238B  8 26 20:31 git
+drwxr-xr-x   18 lzeus  staff   612B  8 26 10:51 logs
+drwxr-xr-x   21 lzeus  staff   714B  8 29 08:55 mydata
+-rw-r--r--    1 lzeus  staff    44K  9  1 11:43 nucc.log
+-rw-r--r--    1 lzeus  staff    85K  8 29 14:44 services-1.0.0-SNAPSHOT.jar
+drwxr-xr-x    3 lzeus  staff   102B  7 27 14:41 tempdir
+drwxr-xr-x    8 lzeus  staff   272B  7 26 11:32 test_idea_dir
+drwxr-xr-x    2 lzeus  staff    68B  8  5 13:12 vipsrv-logs
+drwxr-xr-x   15 lzeus  staff   510B  8 31 13:55 work
+-rw-r--r--@   1 lzeus  staff   205K  8 11 20:02 运营平台技术文档_COP_MANAGE.pdf
+lzeusdeMacBook-Pro:~ lzeus$ ll
+total 17128
+drwxr-xr-x+  62 lzeus  staff   2.1K  9  1 11:44 .
+drwxr-xr-x    5 root   admin   170B  7 18 15:08 ..
+-r--------    1 lzeus  staff     9B  7 18 15:08 .CFUserTextEncoding
+-rw-r--r--@   1 lzeus  staff    42K  9  1 07:55 .DS_Store
+drwx------    2 lzeus  staff    68B  8 30 10:01 .Trash
+drwxr-xr-x    4 lzeus  staff   136B  7 26 11:17 .android
+-rw-r--r--    1 lzeus  staff   4.3K  9  1 08:30 .bash_history
+-rw-r--r--    1 lzeus  staff   141B  7 20 14:56 .bash_profile
+drwxr-xr-x   74 lzeus  staff   2.5K  9  1 08:30 .bash_sessions
+drwxr-xr-x    4 lzeus  staff   136B  8 29 14:39 .config
+drwxr-xr-x   10 lzeus  staff   340B  8 30 14:15 .def
+drwxr-xr-x    6 lzeus  staff   204B  7 19 17:51 .eclipse
+-rw-r--r--    1 lzeus  staff   152B  8 29 09:22 .gitconfig
+-rw-------    1 lzeus  staff    65B  9  1 11:13 .lesshst
+drwxr-xr-x    6 lzeus  staff   204B  7 27 20:07 .m2
+drwxr-xr-x    3 lzeus  staff   102B  7 26 16:38 .node-gyp
+drwxr-xr-x  225 lzeus  staff   7.5K  7 27 16:13 .npm
+-rw-r--r--    1 lzeus  staff    77B  8 30 11:17 .npm_updater.json
+drwxr-xr-x    3 lzeus  staff   102B  7 27 14:30 .npminstall_tarball
+drwxr-xr-x    4 lzeus  staff   136B  7 19 11:00 .oracle_jre_usage
+drwxr-xr-x    5 lzeus  staff   170B  8 26 18:01 .p2
+drwx------    3 lzeus  staff   102B  8 29 22:36 .putty
+drwxr-xr-x    8 lzeus  staff   272B  9  1 08:35 .ssh
+drwxr-xr-x    2 root   staff    68B  9  1 09:42 .tnpm
+drwxr-xr-x    2 lzeus  staff    68B  9  1 10:38 .tnpm_tmp
+-rw-r--r--    1 lzeus  staff    29B  7 26 16:35 .tnpmrc
+-rw-r--r--    1 lzeus  staff   8.0K  7 27 15:06 .v8flags.4.5.103.36.lzeus.json
+-rw-r--r--    1 lzeus  staff   8.0K  7 28 11:56 .v8flags.4.5.103.36.root.json
+drwxr-xr-x    3 lzeus  staff   102B  7 25 16:37 .vim
+-rw-------    1 lzeus  staff   6.9K  9  1 11:44 .viminfo
+drwxr-xr-x    4 lzeus  staff   136B  8 26 08:49 .yunpan
+drwx------    6 lzeus  staff   204B  8 30 10:13 Applications
+drwx------+   9 lzeus  staff   306B  8 30 10:01 Desktop
+drwx------+  10 lzeus  staff   340B  8 11 20:05 Documents
+drwx------+  49 lzeus  staff   1.6K  8 30 10:01 Downloads
+drwxr-xr-x   15 lzeus  staff   510B  8  5 13:06 JAVA_WORK
+drwx------@  53 lzeus  staff   1.8K  7 22 17:46 Library
+drwx------+   3 lzeus  staff   102B  7 18 15:08 Movies
+drwx------+   6 lzeus  staff   204B  8  3 14:42 Music
+drwx------+   3 lzeus  staff   102B  7 18 15:08 Pictures
+drwxr-xr-x+   5 lzeus  staff   170B  7 18 15:08 Public
+drwxr-xr-x   11 lzeus  staff   374B  8 30 11:23 REACT_WORK
+drwxr-xr-x    5 lzeus  staff   170B  8  1 20:52 VirtualBox VMs
+-rw-r--r--    1 lzeus  staff   186B  8  5 10:16 antx.properties
+drwxr-xr-x@  10 lzeus  staff   340B  7 20 16:49 apache-maven-3.2.5
+-rw-r--r--@   1 lzeus  staff   7.6M  7 20 11:30 apache-maven-3.2.5-bin.tar.gz
+-rw-r--r--    1 lzeus  staff   121K  8 29 14:46 common-1.0.0-SNAPSHOT.jar
+-rw-r--r--    1 lzeus  staff    48K  8 29 14:41 common-1.3.3.jar
+-rw-r--r--    1 lzeus  staff    38K  8 29 14:43 common-dao-1.0.1.jar
+drwxr-xr-x    3 lzeus  staff   102B  8  5 13:12 configclient
+-rw-r--r--    1 lzeus  staff   121K  8 29 14:47 core-1.0.0-SNAPSHOT.jar
+drwxr-xr-x    5 lzeus  staff   170B  8  4 06:37 diamond
+drwxr-xr-x    7 lzeus  staff   238B  8 26 20:31 git
+drwxr-xr-x   18 lzeus  staff   612B  8 26 10:51 logs
+drwxr-xr-x   21 lzeus  staff   714B  8 29 08:55 mydata
+-rw-r--r--    1 lzeus  staff    44K  9  1 11:43 nucc.log
+-rw-r--r--    1 lzeus  staff    85K  8 29 14:44 services-1.0.0-SNAPSHOT.jar
+drwxr-xr-x    3 lzeus  staff   102B  7 27 14:41 tempdir
+drwxr-xr-x    8 lzeus  staff   272B  7 26 11:32 test_idea_dir
+drwxr-xr-x    2 lzeus  staff    68B  8  5 13:12 vipsrv-logs
+drwxr-xr-x   15 lzeus  staff   510B  8 31 13:55 work
+-rw-r--r--@   1 lzeus  staff   205K  8 11 20:02 运营平台技术文档_COP_MANAGE.pdf
+lzeusdeMacBook-Pro:~ lzeus$ ls
+Applications				Music					apache-maven-3.2.5-bin.tar.gz		git					vipsrv-logs
+Desktop					Pictures				common-1.0.0-SNAPSHOT.jar		logs					work
+Documents				Public					common-1.3.3.jar			mydata					运营平台技术文档_COP_MANAGE.pdf
+Downloads				REACT_WORK				common-dao-1.0.1.jar			nucc.log
+JAVA_WORK				VirtualBox VMs				configclient				services-1.0.0-SNAPSHOT.jar
+Library					antx.properties				core-1.0.0-SNAPSHOT.jar			tempdir
+Movies					apache-maven-3.2.5			diamond					test_idea_dir
+lzeusdeMacBook-Pro:~ lzeus$ ll
+total 17128
+drwxr-xr-x+  62 lzeus  staff   2.1K  9  1 11:44 .
+drwxr-xr-x    5 root   admin   170B  7 18 15:08 ..
+-r--------    1 lzeus  staff     9B  7 18 15:08 .CFUserTextEncoding
+-rw-r--r--@   1 lzeus  staff    42K  9  1 07:55 .DS_Store
+drwx------    2 lzeus  staff    68B  8 30 10:01 .Trash
+drwxr-xr-x    4 lzeus  staff   136B  7 26 11:17 .android
+-rw-r--r--    1 lzeus  staff   4.3K  9  1 08:30 .bash_history
+-rw-r--r--    1 lzeus  staff   141B  7 20 14:56 .bash_profile
+drwxr-xr-x   74 lzeus  staff   2.5K  9  1 08:30 .bash_sessions
+drwxr-xr-x    4 lzeus  staff   136B  8 29 14:39 .config
+drwxr-xr-x   10 lzeus  staff   340B  8 30 14:15 .def
+drwxr-xr-x    6 lzeus  staff   204B  7 19 17:51 .eclipse
+-rw-r--r--    1 lzeus  staff   152B  8 29 09:22 .gitconfig
+-rw-------    1 lzeus  staff    65B  9  1 11:13 .lesshst
+drwxr-xr-x    6 lzeus  staff   204B  7 27 20:07 .m2
+drwxr-xr-x    3 lzeus  staff   102B  7 26 16:38 .node-gyp
+drwxr-xr-x  225 lzeus  staff   7.5K  7 27 16:13 .npm
+-rw-r--r--    1 lzeus  staff    77B  8 30 11:17 .npm_updater.json
+drwxr-xr-x    3 lzeus  staff   102B  7 27 14:30 .npminstall_tarball
+drwxr-xr-x    4 lzeus  staff   136B  7 19 11:00 .oracle_jre_usage
+drwxr-xr-x    5 lzeus  staff   170B  8 26 18:01 .p2
+drwx------    3 lzeus  staff   102B  8 29 22:36 .putty
+drwxr-xr-x    8 lzeus  staff   272B  9  1 08:35 .ssh
+drwxr-xr-x    2 root   staff    68B  9  1 09:42 .tnpm
+drwxr-xr-x    2 lzeus  staff    68B  9  1 10:38 .tnpm_tmp
+-rw-r--r--    1 lzeus  staff    29B  7 26 16:35 .tnpmrc
+-rw-r--r--    1 lzeus  staff   8.0K  7 27 15:06 .v8flags.4.5.103.36.lzeus.json
+-rw-r--r--    1 lzeus  staff   8.0K  7 28 11:56 .v8flags.4.5.103.36.root.json
+drwxr-xr-x    3 lzeus  staff   102B  7 25 16:37 .vim
+-rw-------    1 lzeus  staff   6.9K  9  1 11:44 .viminfo
+drwxr-xr-x    4 lzeus  staff   136B  8 26 08:49 .yunpan
+drwx------    6 lzeus  staff   204B  8 30 10:13 Applications
+drwx------+   9 lzeus  staff   306B  8 30 10:01 Desktop
+drwx------+  10 lzeus  staff   340B  8 11 20:05 Documents
+drwx------+  49 lzeus  staff   1.6K  8 30 10:01 Downloads
+drwxr-xr-x   15 lzeus  staff   510B  8  5 13:06 JAVA_WORK
+drwx------@  53 lzeus  staff   1.8K  7 22 17:46 Library
+drwx------+   3 lzeus  staff   102B  7 18 15:08 Movies
+drwx------+   6 lzeus  staff   204B  8  3 14:42 Music
+drwx------+   3 lzeus  staff   102B  7 18 15:08 Pictures
+drwxr-xr-x+   5 lzeus  staff   170B  7 18 15:08 Public
+drwxr-xr-x   11 lzeus  staff   374B  8 30 11:23 REACT_WORK
+drwxr-xr-x    5 lzeus  staff   170B  8  1 20:52 VirtualBox VMs
+-rw-r--r--    1 lzeus  staff   186B  8  5 10:16 antx.properties
+drwxr-xr-x@  10 lzeus  staff   340B  7 20 16:49 apache-maven-3.2.5
+-rw-r--r--@   1 lzeus  staff   7.6M  7 20 11:30 apache-maven-3.2.5-bin.tar.gz
+-rw-r--r--    1 lzeus  staff   121K  8 29 14:46 common-1.0.0-SNAPSHOT.jar
+-rw-r--r--    1 lzeus  staff    48K  8 29 14:41 common-1.3.3.jar
+-rw-r--r--    1 lzeus  staff    38K  8 29 14:43 common-dao-1.0.1.jar
+drwxr-xr-x    3 lzeus  staff   102B  8  5 13:12 configclient
+-rw-r--r--    1 lzeus  staff   121K  8 29 14:47 core-1.0.0-SNAPSHOT.jar
+drwxr-xr-x    5 lzeus  staff   170B  8  4 06:37 diamond
+drwxr-xr-x    7 lzeus  staff   238B  8 26 20:31 git
+drwxr-xr-x   18 lzeus  staff   612B  8 26 10:51 logs
+drwxr-xr-x   21 lzeus  staff   714B  8 29 08:55 mydata
+-rw-r--r--    1 lzeus  staff    44K  9  1 11:43 nucc.log
+-rw-r--r--    1 lzeus  staff    85K  8 29 14:44 services-1.0.0-SNAPSHOT.jar
+drwxr-xr-x    3 lzeus  staff   102B  7 27 14:41 tempdir
+drwxr-xr-x    8 lzeus  staff   272B  7 26 11:32 test_idea_dir
+drwxr-xr-x    2 lzeus  staff    68B  8  5 13:12 vipsrv-logs
+drwxr-xr-x   15 lzeus  staff   510B  8 31 13:55 work
+-rw-r--r--@   1 lzeus  staff   205K  8 11 20:02 运营平台技术文档_COP_MANAGE.pdf
+lzeusdeMacBook-Pro:~ lzeus$ cd REACT_WORK/
+lzeusdeMacBook-Pro:REACT_WORK lzeus$ ll
+total 584
+drwxr-xr-x  11 lzeus  staff   374B  8 30 11:23 .
+drwxr-xr-x+ 62 lzeus  staff   2.1K  9  1 11:44 ..
+-rw-r--r--@  1 lzeus  staff    10K  7 27 20:50 .DS_Store
+drwxr-xr-x   3 lzeus  staff   102B  8 30 11:24 20160830
+drwxr-xr-x   4 lzeus  staff   136B  7 28 20:28 build
+drwxr-xr-x   4 lzeus  staff   136B  7 27 15:58 node_modules
+drwxr-xr-x@  9 lzeus  staff   306B  7 27 18:25 react-0.14.7
+drwxr-xr-x@ 19 lzeus  staff   646B  7 27 16:14 react-tutorial-master
+-rw-r--r--@  1 lzeus  staff    14K  7 27 16:12 react-tutorial-master.zip
+drwxr-xr-x   5 lzeus  staff   170B  7 27 18:37 src
+-rw-r--r--   1 lzeus  staff   261K  8  1 20:23 杨彤简历1.pdf
+lzeusdeMacBook-Pro:REACT_WORK lzeus$ cd 20160830/
+lzeusdeMacBook-Pro:20160830 lzeus$ ll
+total 0
+drwxr-xr-x   3 lzeus  staff   102B  8 30 11:24 .
+drwxr-xr-x  11 lzeus  staff   374B  8 30 11:23 ..
+drwxr-xr-x   3 lzeus  staff   102B  8 30 11:36 project1
+lzeusdeMacBook-Pro:20160830 lzeus$ cd project1/
+lzeusdeMacBook-Pro:project1 lzeus$ ll
+total 0
+drwxr-xr-x   3 lzeus  staff   102B  8 30 11:36 .
+drwxr-xr-x   3 lzeus  staff   102B  8 30 11:24 ..
+drwxr-xr-x  10 lzeus  staff   340B  8 30 14:21 assets
+lzeusdeMacBook-Pro:project1 lzeus$ def dev
+info [core] kit: @ali/def-kit-ice@1.8.8
+[tnpm] clean up tmp cache dir: /Users/lzeus/.tnpm_tmp/tnpm.2016-9-1.41763.1472703584655
+Ok: 模块更新完成 耗时 1 s
+info [core] builder: @ali/builder-ice@1.8.17
+[12:19:46] 正在启动 ICE server, port: 3333 . livereload: 63790
+>>   ICE server at: http://127.0.0.1:3333
+  ICE 代码编译中  [==============      ]  70% (0.7 seconds)  <-- GET /
+  --> GET / 200 21ms 7.04kb
+  ICE 代码编译中  [===========         ]  56% (2.0 seconds)  <-- GET /assets
+  --> GET /assets 200 12ms 7.9kb
+  ICE 代码编译中  [====================]  100% (9.2 seconds)
+
+Build completed in 9.24s
+
+Hash: 1c06adabb49432e6ce4a
+Version: webpack 1.13.2
+Time: 9244ms
+                    Asset     Size  Chunks             Chunk Names
+ pages/form_demo/index.js  1.76 MB       0  [emitted]  pages/form_demo/index
+      pages/list/index.js  13.8 kB       1  [emitted]  pages/list/index
+   pages/example/index.js  13.7 kB       2  [emitted]  pages/example/index
+  pages/example/index.css  13.1 kB       2  [emitted]  pages/example/index
+pages/form_demo/index.css   858 kB       0  [emitted]  pages/form_demo/index
+     pages/list/index.css  13.1 kB       1  [emitted]  pages/list/index
+webpack: bundle is now VALID.
+  <-- GET /assets/src
+  --> GET /assets/src 200 1ms 7.24kb
+  <-- GET /assets/src
+  --> GET /assets/src 200 7ms 7.24kb
+  <-- GET /assets/src
+  --> GET /assets/src 200 1ms 7.24kb
+[12:19:55] livereload refresh by 1c06adabb49432e6ce4a.js
+  <-- GET /assets/src
+  --> GET /assets/src 200 1ms 7.24kb
+  <-- GET /assets
+  --> GET /assets 200 2ms 7.9kb
+  <-- GET /assets/src
+  --> GET /assets/src 200 1ms 7.24kb
+  <-- GET /assets/src/pages
+  --> GET /assets/src/pages 200 2ms 7.66kb
+  <-- GET /assets/src/pages/form_demo
+  --> GET /assets/src/pages/form_demo 200 2ms 8.04kb
+  <-- GET /assets/src/pages/form_demo/index.html
+  --> GET /assets/src/pages/form_demo/index.html 200 11ms 574b
+  <-- GET /assets/build/pages/form_demo/index.css
+  --> GET /assets/build/pages/form_demo/index.css 200 2ms 838.08kb
+  <-- GET /assets/build/pages/form_demo/index.js
+  --> GET /assets/build/pages/form_demo/index.js 200 1ms 1.68mb
+  <-- GET /assets/src/pages/form_demo/index.html
+  --> GET /assets/src/pages/form_demo/index.html 200 3ms 574b
+  <-- GET /assets/build/pages/form_demo/index.css
+  --> GET /assets/build/pages/form_demo/index.css 200 0ms 838.08kb
+  <-- GET /assets/build/pages/form_demo/index.js
+  --> GET /assets/build/pages/form_demo/index.js 200 1ms 1.68mb
+webpack: bundle is now INVALID.
+
+  ICE 代码编译中  [====================]  100% (0.6 seconds)
+
+Build completed in 0.559s
+
+Hash: e5264863c23a8f2e9f54
+Version: webpack 1.13.2
+Time: 559ms
+                    Asset     Size  Chunks             Chunk Names
+ pages/form_demo/index.js  1.76 MB       0  [emitted]  pages/form_demo/index
+      pages/list/index.js  13.8 kB       1  [emitted]  pages/list/index
+   pages/example/index.js  13.7 kB       2  [emitted]  pages/example/index
+  pages/example/index.css  13.1 kB       2  [emitted]  pages/example/index
+pages/form_demo/index.css   858 kB       0  [emitted]  pages/form_demo/index
+     pages/list/index.css  13.1 kB       1  [emitted]  pages/list/index
+webpack: bundle is now VALID.
+[13:04:26] livereload refresh by e5264863c23a8f2e9f54.js
+  <-- GET /assets/src/pages/form_demo/index.html
+  --> GET /assets/src/pages/form_demo/index.html 200 4ms 574b
+  <-- GET /assets/build/pages/form_demo/index.css
+  --> GET /assets/build/pages/form_demo/index.css 200 1ms 838.08kb
+  <-- GET /assets/build/pages/form_demo/index.js
+  --> GET /assets/build/pages/form_demo/index.js 200 1ms 1.68mb
+  <-- GET /assets/src/pages/form_demo/index.html
+  --> GET /assets/src/pages/form_demo/index.html 200 1ms 574b
+  <-- GET /assets/build/pages/form_demo/index.css
+  --> GET /assets/build/pages/form_demo/index.css 200 0ms 838.08kb
+  <-- GET /assets/build/pages/form_demo/index.js
+  --> GET /assets/build/pages/form_demo/index.js 200 1ms 1.68mb
+^ClzeusdeMacBook-Pro:project1 lzeus$ 
+lzeusdeMacBook-Pro:project1 lzeus$ 
+lzeusdeMacBook-Pro:project1 lzeus$ def dev
+info [core] kit: @ali/def-kit-ice@1.8.8
+[tnpm] clean up tmp cache dir: /Users/lzeus/.tnpm_tmp/tnpm.2016-9-1.42472.1472714108397
+Ok: 模块更新完成 耗时 2 s
+info [core] builder: @ali/builder-ice@1.8.17
+[15:15:10] 正在启动 ICE server, port: 3333 . livereload: 64110
+>>   ICE server at: http://127.0.0.1:3333
+  ICE 代码编译中  [====================]  100% (10.9 seconds)
+
+Build completed in 10.992s
+
+Hash: e7b98126803cceaa7a78
+Version: webpack 1.13.2
+Time: 10995ms
+                    Asset     Size  Chunks             Chunk Names
+ pages/form_demo/index.js  1.88 MB       0  [emitted]  pages/form_demo/index
+      pages/list/index.js  13.8 kB       1  [emitted]  pages/list/index
+   pages/example/index.js  13.7 kB       2  [emitted]  pages/example/index
+  pages/example/index.css  13.1 kB       2  [emitted]  pages/example/index
+pages/form_demo/index.css  1.22 MB       0  [emitted]  pages/form_demo/index
+     pages/list/index.css  13.1 kB       1  [emitted]  pages/list/index
+webpack: bundle is now VALID.
+^ClzeusdeMacBook-Pro:project1 lzeus$ 
+lzeusdeMacBook-Pro:project1 lzeus$ 
+lzeusdeMacBook-Pro:project1 lzeus$ pwd
+/Users/lzeus/REACT_WORK/20160830/project1
+lzeusdeMacBook-Pro:project1 lzeus$ top
+
+  [恢复于 2016年9月9日 上午8:03:01]
+Last login: Fri Sep  9 08:03:01 on ttys001
+Restored session: 2016年 9月 9日 星期五 08时01分04秒 CST
+lzeusdeMacBook-Pro:project1 lzeus$ 
+lzeusdeMacBook-Pro:project1 lzeus$ 
+lzeusdeMacBook-Pro:project1 lzeus$ 
+lzeusdeMacBook-Pro:project1 lzeus$ 
+lzeusdeMacBook-Pro:project1 lzeus$ cd
+lzeusdeMacBook-Pro:~ lzeus$ ll
+total 17104
+drwxr-xr-x+  62 lzeus  staff   2.1K  9  9 08:02 .
+drwxr-xr-x    5 root   admin   170B  7 18 15:08 ..
+-r--------    1 lzeus  staff     9B  7 18 15:08 .CFUserTextEncoding
+-rw-r--r--@   1 lzeus  staff    38K  9  9 09:58 .DS_Store
+drwx------    2 lzeus  staff    68B  9  9 08:02 .Trash
+drwxr-xr-x    4 lzeus  staff   136B  7 26 11:17 .android
+-rw-r--r--    1 lzeus  staff   3.6K  9  9 08:01 .bash_history
+-rw-r--r--    1 lzeus  staff   141B  7 20 14:56 .bash_profile
+drwxr-xr-x   79 lzeus  staff   2.6K  9  9 08:03 .bash_sessions
+drwxr-xr-x    4 lzeus  staff   136B  8 29 14:39 .config
+drwxr-xr-x   10 lzeus  staff   340B  8 30 14:15 .def
+drwxr-xr-x    6 lzeus  staff   204B  7 19 17:51 .eclipse
+-rw-r--r--    1 lzeus  staff   152B  8 29 09:22 .gitconfig
+-rw-------    1 lzeus  staff    65B  9  1 11:13 .lesshst
+drwxr-xr-x    6 lzeus  staff   204B  7 27 20:07 .m2
+drwxr-xr-x    3 lzeus  staff   102B  7 26 16:38 .node-gyp
+drwxr-xr-x  225 lzeus  staff   7.5K  7 27 16:13 .npm
+-rw-r--r--    1 lzeus  staff    77B  8 30 11:17 .npm_updater.json
+drwxr-xr-x    3 lzeus  staff   102B  7 27 14:30 .npminstall_tarball
+drwxr-xr-x    4 lzeus  staff   136B  7 19 11:00 .oracle_jre_usage
+drwxr-xr-x    5 lzeus  staff   170B  8 26 18:01 .p2
+drwx------    3 lzeus  staff   102B  8 29 22:36 .putty
+drwxr-xr-x    8 lzeus  staff   272B  9  1 08:35 .ssh
+drwxr-xr-x    2 root   staff    68B  9  1 09:42 .tnpm
+drwxr-xr-x    2 lzeus  staff    68B  9  8 09:12 .tnpm_tmp
+-rw-r--r--    1 lzeus  staff    29B  7 26 16:35 .tnpmrc
+-rw-r--r--    1 lzeus  staff   8.0K  7 27 15:06 .v8flags.4.5.103.36.lzeus.json
+-rw-r--r--    1 lzeus  staff   8.0K  7 28 11:56 .v8flags.4.5.103.36.root.json
+drwxr-xr-x    3 lzeus  staff   102B  7 25 16:37 .vim
+-rw-------    1 lzeus  staff   6.9K  9  7 11:43 .viminfo
+drwxr-xr-x    4 lzeus  staff   136B  9  9 08:03 .yunpan
+drwx------    6 lzeus  staff   204B  8 30 10:13 Applications
+drwx------+  11 lzeus  staff   374B  9  9 15:08 Desktop
+drwx------+  11 lzeus  staff   374B  9  7 11:34 Documents
+drwx------+  60 lzeus  staff   2.0K  9  9 16:25 Downloads
+drwxr-xr-x   15 lzeus  staff   510B  8  5 13:06 JAVA_WORK
+drwx------@  53 lzeus  staff   1.8K  7 22 17:46 Library
+drwx------+   3 lzeus  staff   102B  7 18 15:08 Movies
+drwx------+   6 lzeus  staff   204B  8  3 14:42 Music
+drwx------+   3 lzeus  staff   102B  7 18 15:08 Pictures
+drwxr-xr-x+   5 lzeus  staff   170B  7 18 15:08 Public
+drwxr-xr-x   11 lzeus  staff   374B  8 30 11:23 REACT_WORK
+drwxr-xr-x    5 lzeus  staff   170B  8  1 20:52 VirtualBox VMs
+-rw-r--r--    1 lzeus  staff   186B  8  5 10:16 antx.properties
+drwxr-xr-x@  10 lzeus  staff   340B  7 20 16:49 apache-maven-3.2.5
+-rw-r--r--@   1 lzeus  staff   7.6M  7 20 11:30 apache-maven-3.2.5-bin.tar.gz
+-rw-r--r--    1 lzeus  staff   121K  8 29 14:46 common-1.0.0-SNAPSHOT.jar
+-rw-r--r--    1 lzeus  staff    48K  8 29 14:41 common-1.3.3.jar
+-rw-r--r--    1 lzeus  staff    38K  8 29 14:43 common-dao-1.0.1.jar
+drwxr-xr-x    3 lzeus  staff   102B  8  5 13:12 configclient
+-rw-r--r--    1 lzeus  staff   121K  8 29 14:47 core-1.0.0-SNAPSHOT.jar
+drwxr-xr-x    5 lzeus  staff   170B  8  4 06:37 diamond
+drwxr-xr-x    7 lzeus  staff   238B  8 26 20:31 git
+drwxr-xr-x   18 lzeus  staff   612B  8 26 10:51 logs
+drwxr-xr-x   21 lzeus  staff   714B  8 29 08:55 mydata
+-rw-r--r--    1 lzeus  staff    38K  9  8 22:39 nucc.log
+-rw-r--r--    1 lzeus  staff    85K  8 29 14:44 services-1.0.0-SNAPSHOT.jar
+drwxr-xr-x    3 lzeus  staff   102B  7 27 14:41 tempdir
+drwxr-xr-x    8 lzeus  staff   272B  7 26 11:32 test_idea_dir
+drwxr-xr-x    2 lzeus  staff    68B  8  5 13:12 vipsrv-logs
+drwxr-xr-x   15 lzeus  staff   510B  8 31 13:55 work
+-rw-r--r--@   1 lzeus  staff   205K  8 11 20:02 运营平台技术文档_COP_MANAGE.pdf
+lzeusdeMacBook-Pro:~ lzeus$ cd git
+lzeusdeMacBook-Pro:git lzeus$ ll
+total 24
+drwxr-xr-x   7 lzeus  staff   238B  8 26 20:31 .
+drwxr-xr-x+ 62 lzeus  staff   2.1K  9  9 08:02 ..
+-rw-r--r--@  1 lzeus  staff   8.0K  8  4 19:40 .DS_Store
+drwxr-xr-x  10 lzeus  staff   340B  8  5 10:28 citrus-sample
+drwxr-xr-x  12 lzeus  staff   408B  9  1 10:36 cop
+drwxr-xr-x  28 lzeus  staff   952B  8 26 08:59 nucc
+drwxr-xr-x  18 lzeus  staff   612B  8 10 10:56 sellerhome
+lzeusdeMacBook-Pro:git lzeus$ ll
+total 24
+drwxr-xr-x   7 lzeus  staff   238B  8 26 20:31 .
+drwxr-xr-x+ 62 lzeus  staff   2.1K  9  9 08:02 ..
+-rw-r--r--@  1 lzeus  staff   8.0K  8  4 19:40 .DS_Store
+drwxr-xr-x  10 lzeus  staff   340B  8  5 10:28 citrus-sample
+drwxr-xr-x  12 lzeus  staff   408B  9  1 10:36 cop
+drwxr-xr-x  28 lzeus  staff   952B  8 26 08:59 nucc
+drwxr-xr-x  18 lzeus  staff   612B  8 10 10:56 sellerhome
+lzeusdeMacBook-Pro:git lzeus$ ll
+total 24
+drwxr-xr-x   7 lzeus  staff   238B  8 26 20:31 .
+drwxr-xr-x+ 62 lzeus  staff   2.1K  9  9 08:02 ..
+-rw-r--r--@  1 lzeus  staff   8.0K  8  4 19:40 .DS_Store
+drwxr-xr-x  10 lzeus  staff   340B  8  5 10:28 citrus-sample
+drwxr-xr-x  12 lzeus  staff   408B  9  1 10:36 cop
+drwxr-xr-x  28 lzeus  staff   952B  8 26 08:59 nucc
+drwxr-xr-x  18 lzeus  staff   612B  8 10 10:56 sellerhome
+lzeusdeMacBook-Pro:git lzeus$ ll
+total 24
+drwxr-xr-x   7 lzeus  staff   238B  8 26 20:31 .
+drwxr-xr-x+ 62 lzeus  staff   2.1K  9  9 08:02 ..
+-rw-r--r--@  1 lzeus  staff   8.0K  8  4 19:40 .DS_Store
+drwxr-xr-x  10 lzeus  staff   340B  8  5 10:28 citrus-sample
+drwxr-xr-x  12 lzeus  staff   408B  9  1 10:36 cop
+drwxr-xr-x  28 lzeus  staff   952B  8 26 08:59 nucc
+drwxr-xr-x  18 lzeus  staff   612B  8 10 10:56 sellerhome
+lzeusdeMacBook-Pro:git lzeus$ ll
+total 24
+drwxr-xr-x   7 lzeus  staff   238B  8 26 20:31 .
+drwxr-xr-x+ 62 lzeus  staff   2.1K  9  9 08:02 ..
+-rw-r--r--@  1 lzeus  staff   8.0K  8  4 19:40 .DS_Store
+drwxr-xr-x  10 lzeus  staff   340B  8  5 10:28 citrus-sample
+drwxr-xr-x  12 lzeus  staff   408B  9  1 10:36 cop
+drwxr-xr-x  28 lzeus  staff   952B  8 26 08:59 nucc
+drwxr-xr-x  18 lzeus  staff   612B  8 10 10:56 sellerhome
+lzeusdeMacBook-Pro:git lzeus$ 
+lzeusdeMacBook-Pro:git lzeus$ 
+lzeusdeMacBook-Pro:git lzeus$ 
+lzeusdeMacBook-Pro:git lzeus$ pwd
+/Users/lzeus/git
+lzeusdeMacBook-Pro:git lzeus$ ll
+total 24
+drwxr-xr-x   7 lzeus  staff   238B  8 26 20:31 .
+drwxr-xr-x+ 62 lzeus  staff   2.1K  9  9 08:02 ..
+-rw-r--r--@  1 lzeus  staff   8.0K  8  4 19:40 .DS_Store
+drwxr-xr-x  10 lzeus  staff   340B  8  5 10:28 citrus-sample
+drwxr-xr-x  12 lzeus  staff   408B  9  1 10:36 cop
+drwxr-xr-x  28 lzeus  staff   952B  8 26 08:59 nucc
+drwxr-xr-x  18 lzeus  staff   612B  8 10 10:56 sellerhome
+lzeusdeMacBook-Pro:git lzeus$ git clone git@gitlab.alibaba-inc.com:tb/operation-platform-admin.git
+Cloning into 'operation-platform-admin'...
+Warning: Permanently added the RSA host key for IP address '10.101.22.95' to the list of known hosts.
+remote: Counting objects: 420, done.
+remote: Total 420 (delta 0), reused 420 (delta 0)
+Receiving objects: 100% (420/420), 531.98 KiB | 0 bytes/s, done.
+Checking connectivity... done.
+lzeusdeMacBook-Pro:git lzeus$ ll
+total 24
+drwxr-xr-x   8 lzeus  staff   272B  9  9 19:26 .
+drwxr-xr-x+ 62 lzeus  staff   2.1K  9  9 08:02 ..
+-rw-r--r--@  1 lzeus  staff   8.0K  8  4 19:40 .DS_Store
+drwxr-xr-x  10 lzeus  staff   340B  8  5 10:28 citrus-sample
+drwxr-xr-x  12 lzeus  staff   408B  9  1 10:36 cop
+drwxr-xr-x  28 lzeus  staff   952B  8 26 08:59 nucc
+drwxr-xr-x  12 lzeus  staff   408B  9  9 19:26 operation-platform-admin
+drwxr-xr-x  18 lzeus  staff   612B  8 10 10:56 sellerhome
+lzeusdeMacBook-Pro:git lzeus$ cd operation-platform-admin/
+lzeusdeMacBook-Pro:operation-platform-admin lzeus$ ll
+total 56
+drwxr-xr-x  12 lzeus  staff   408B  9  9 19:26 .
+drwxr-xr-x   8 lzeus  staff   272B  9  9 19:26 ..
+-rw-r--r--   1 lzeus  staff   197B  9  9 19:26 .editorconfig
+-rw-r--r--   1 lzeus  staff   175B  9  9 19:26 .eslintrc
+drwxr-xr-x  13 lzeus  staff   442B  9  9 19:26 .git
+-rw-r--r--   1 lzeus  staff    20B  9  9 19:26 .gitignore
+drwxr-xr-x  11 lzeus  staff   374B  9  9 19:26 .idea
+-rw-r--r--   1 lzeus  staff   369B  9  9 19:26 abc.json
+-rw-r--r--   1 lzeus  staff   370B  9  9 19:26 abc.json.bak
+-rw-r--r--   1 lzeus  staff   380B  9  9 19:26 package.json
+-rw-r--r--   1 lzeus  staff   371B  9  9 19:26 package.json.bak
+drwxr-xr-x   4 lzeus  staff   136B  9  9 19:26 src
+lzeusdeMacBook-Pro:operation-platform-admin lzeus$ cd ..
+lzeusdeMacBook-Pro:git lzeus$ ll
+total 24
+drwxr-xr-x   8 lzeus  staff   272B  9  9 19:26 .
+drwxr-xr-x+ 62 lzeus  staff   2.1K  9  9 08:02 ..
+-rw-r--r--@  1 lzeus  staff   8.0K  8  4 19:40 .DS_Store
+drwxr-xr-x  10 lzeus  staff   340B  8  5 10:28 citrus-sample
+drwxr-xr-x  12 lzeus  staff   408B  9  1 10:36 cop
+drwxr-xr-x  28 lzeus  staff   952B  8 26 08:59 nucc
+drwxr-xr-x  12 lzeus  staff   408B  9  9 19:26 operation-platform-admin
+drwxr-xr-x  18 lzeus  staff   612B  8 10 10:56 sellerhome
+lzeusdeMacBook-Pro:git lzeus$ git clone git@gitlab.alibaba-inc.com:tb/operations-platform.git
+Cloning into 'operations-platform'...
+remote: Counting objects: 2014, done.
+remote: Total 2014 (delta 0), reused 2014 (delta 0)
+Receiving objects: 100% (2014/2014), 1.89 MiB | 0 bytes/s, done.
+Checking connectivity... done.
+lzeusdeMacBook-Pro:git lzeus$ ll
+total 24
+drwxr-xr-x   9 lzeus  staff   306B  9  9 19:26 .
+drwxr-xr-x+ 62 lzeus  staff   2.1K  9  9 08:02 ..
+-rw-r--r--@  1 lzeus  staff   8.0K  8  4 19:40 .DS_Store
+drwxr-xr-x  10 lzeus  staff   340B  8  5 10:28 citrus-sample
+drwxr-xr-x  12 lzeus  staff   408B  9  1 10:36 cop
+drwxr-xr-x  28 lzeus  staff   952B  8 26 08:59 nucc
+drwxr-xr-x  12 lzeus  staff   408B  9  9 19:26 operation-platform-admin
+drwxr-xr-x  11 lzeus  staff   374B  9  9 19:26 operations-platform
+drwxr-xr-x  18 lzeus  staff   612B  8 10 10:56 sellerhome
+lzeusdeMacBook-Pro:git lzeus$ 
+lzeusdeMacBook-Pro:git lzeus$ 
+lzeusdeMacBook-Pro:git lzeus$ 
+lzeusdeMacBook-Pro:git lzeus$ 
+lzeusdeMacBook-Pro:git lzeus$ cd
+lzeusdeMacBook-Pro:~ lzeus$ cd work/
+lzeusdeMacBook-Pro:work lzeus$ ll
+total 632
+drwxr-xr-x  16 lzeus  staff   544B  9  9 20:09 .
+drwxr-xr-x+ 62 lzeus  staff   2.1K  9  9 08:02 ..
+-rw-r--r--@  1 lzeus  staff    12K  9  9 20:09 .DS_Store
+drwxr-xr-x   7 lzeus  staff   238B  9  9 20:24 cop_data
+-rw-r--r--@  1 lzeus  staff    20B  7 29 14:06 note.txt
+-rw-r--r--   1 lzeus  staff   379B  8 31 13:55 回复.md
+-rw-r--r--   1 lzeus  staff   124B  8 31 11:06 关于TOS小二端 分派给商盟.md
+-rw-r--r--   1 lzeus  staff    24B  7 29 14:45 附件_001
+-rw-r--r--   1 lzeus  staff    24B  7 29 14:45 附件_002
+-rw-r--r--   1 lzeus  staff    24B  7 29 14:46 附件_003
+-rw-r--r--   1 lzeus  staff    31B  7 29 14:43 附件_身份证
+-rw-r--r--   1 lzeus  staff    40B  7 29 14:44 附件_政府推荐表格
+-rw-r--r--   1 lzeus  staff    42B  7 29 14:44 附件_电商协会授权信
+drwxr-xr-x   3 lzeus  staff   102B  7 25 13:52 会议纪要
+drwxr-xr-x  16 lzeus  staff   544B  9  9 09:59 运营平台
+-rw-r--r--@  1 lzeus  staff   261K  8  1 20:23 杨彤简历1.pdf
+lzeusdeMacBook-Pro:work lzeus$ cd cop_data/
+lzeusdeMacBook-Pro:cop_data lzeus$ ll
+total 1160
+drwxr-xr-x   7 lzeus  staff   238B  9  9 20:24 .
+drwxr-xr-x  16 lzeus  staff   544B  9  9 20:09 ..
+-rw-r--r--   1 lzeus  staff   125K  9  9 20:24 cop_data_files.js
+-rw-r--r--   1 lzeus  staff   132K  9  9 20:24 cop_data_group_apply.js
+-rw-r--r--   1 lzeus  staff    69K  9  9 20:09 cop_data_groups.js
+-rw-r--r--   1 lzeus  staff    12K  9  9 20:23 cop_data_tasks.js
+-rw-r--r--   1 lzeus  staff   230K  9  9 20:21 cop_data_users.js
+lzeusdeMacBook-Pro:cop_data lzeus$ ll
+total 1160
+drwxr-xr-x   7 lzeus  staff   238B  9  9 20:24 .
+drwxr-xr-x  16 lzeus  staff   544B  9  9 20:09 ..
+-rw-r--r--   1 lzeus  staff   125K  9  9 20:24 cop_data_files.js
+-rw-r--r--   1 lzeus  staff   132K  9  9 20:24 cop_data_group_apply.js
+-rw-r--r--   1 lzeus  staff    69K  9  9 20:09 cop_data_groups.js
+-rw-r--r--   1 lzeus  staff    12K  9  9 20:23 cop_data_tasks.js
+-rw-r--r--   1 lzeus  staff   230K  9  9 20:21 cop_data_users.js
+lzeusdeMacBook-Pro:cop_data lzeus$ touch ./index.js
+lzeusdeMacBook-Pro:cop_data lzeus$ ll
+total 1168
+drwxr-xr-x   8 lzeus  staff   272B  9  9 20:27 .
+drwxr-xr-x  16 lzeus  staff   544B  9  9 20:09 ..
+-rw-r--r--   1 lzeus  staff   125K  9  9 20:24 files.js
+-rw-r--r--   1 lzeus  staff   132K  9  9 20:24 forms.js
+-rw-r--r--   1 lzeus  staff    69K  9  9 20:29 groups.js
+-rw-r--r--   1 lzeus  staff    62B  9  9 20:29 index.js
+-rw-r--r--   1 lzeus  staff    12K  9  9 20:23 tasks.js
+-rw-r--r--   1 lzeus  staff   230K  9  9 20:21 users.js
+lzeusdeMacBook-Pro:cop_data lzeus$ node ./index.js 
+get
+lzeusdeMacBook-Pro:cop_data lzeus$ ll
+total 1168
+drwxr-xr-x   8 lzeus  staff   272B  9  9 20:27 .
+drwxr-xr-x  16 lzeus  staff   544B  9  9 20:09 ..
+-rw-r--r--   1 lzeus  staff   125K  9  9 20:24 files.js
+-rw-r--r--   1 lzeus  staff   132K  9  9 20:24 forms.js
+-rw-r--r--   1 lzeus  staff    69K  9  9 20:29 groups.js
+-rw-r--r--   1 lzeus  staff    62B  9  9 20:29 index.js
+-rw-r--r--   1 lzeus  staff    12K  9  9 20:23 tasks.js
+-rw-r--r--   1 lzeus  staff   230K  9  9 20:21 users.js
+lzeusdeMacBook-Pro:cop_data lzeus$ node ./index.js 
+get
+lzeusdeMacBook-Pro:cop_data lzeus$ node ./index.js 
+get
+get
+get
+get
+get
+lzeusdeMacBook-Pro:cop_data lzeus$ node ./index.js 
+get
+get
+get
+get
+get
+行业PD
+内蒙古呼和浩特市羊绒产业带
+青元测试商盟
+山东青岛家纺产业带商盟
+浙江省慈溪市家电产业带
+广东省中山市灯具产业带
+白沟箱包产业带
+山东省威海市渔具产业带
+辽宁省葫芦岛泳装产业带
+福建莆田运动鞋商盟
+江苏省常熟市服装产业带
+广东省东莞市虎门女装产业带
+浙江永康市不锈钢产业带
+青岛市童床产业带
+即墨质商盟
+佛山袜业商盟
+广东省广州市广州箱包产业带
+成都市鞋业产业商会
+广东省潮州市陶瓷产业带
+山东省青岛市家具产业带
+汕头市电子商务产业协会（汕头商盟）
+中山女装商盟
+浙江省云和县木玩产业带
+中国质造桐乡鞋业产业带商盟
+江西省赣州市南康家具产业带
+佛山家具产业带
+浙江省诸暨市袜子产业带
+河南省郑州市女装产业带
+顺德产业带
+江苏省海门市家纺产业带
+中国质造总商盟
+lzeusdeMacBook-Pro:cop_data lzeus$ node ./index.js 
+get
+get
+get
+get
+get
+行业PD
+INSERT INTO nucc_cop_comgroups (gmt_create,gmt_modified,status,features,name,description,approver,creator,updater,manager_status,member_status,has_attachment,audit_status,market_id)
+
+VALUES
+
+(
+now(),
+now(),
+undefined,
+'undefined',
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+内蒙古呼和浩特市羊绒产业带
+INSERT INTO nucc_cop_comgroups (gmt_create,gmt_modified,status,features,name,description,approver,creator,updater,manager_status,member_status,has_attachment,audit_status,market_id)
+
+VALUES
+
+(
+now(),
+now(),
+undefined,
+'undefined',
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+青元测试商盟
+INSERT INTO nucc_cop_comgroups (gmt_create,gmt_modified,status,features,name,description,approver,creator,updater,manager_status,member_status,has_attachment,audit_status,market_id)
+
+VALUES
+
+(
+now(),
+now(),
+undefined,
+'undefined',
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+山东青岛家纺产业带商盟
+INSERT INTO nucc_cop_comgroups (gmt_create,gmt_modified,status,features,name,description,approver,creator,updater,manager_status,member_status,has_attachment,audit_status,market_id)
+
+VALUES
+
+(
+now(),
+now(),
+undefined,
+'undefined',
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+浙江省慈溪市家电产业带
+INSERT INTO nucc_cop_comgroups (gmt_create,gmt_modified,status,features,name,description,approver,creator,updater,manager_status,member_status,has_attachment,audit_status,market_id)
+
+VALUES
+
+(
+now(),
+now(),
+undefined,
+'undefined',
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+广东省中山市灯具产业带
+INSERT INTO nucc_cop_comgroups (gmt_create,gmt_modified,status,features,name,description,approver,creator,updater,manager_status,member_status,has_attachment,audit_status,market_id)
+
+VALUES
+
+(
+now(),
+now(),
+undefined,
+'undefined',
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+白沟箱包产业带
+INSERT INTO nucc_cop_comgroups (gmt_create,gmt_modified,status,features,name,description,approver,creator,updater,manager_status,member_status,has_attachment,audit_status,market_id)
+
+VALUES
+
+(
+now(),
+now(),
+undefined,
+'undefined',
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+山东省威海市渔具产业带
+INSERT INTO nucc_cop_comgroups (gmt_create,gmt_modified,status,features,name,description,approver,creator,updater,manager_status,member_status,has_attachment,audit_status,market_id)
+
+VALUES
+
+(
+now(),
+now(),
+undefined,
+'undefined',
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+辽宁省葫芦岛泳装产业带
+INSERT INTO nucc_cop_comgroups (gmt_create,gmt_modified,status,features,name,description,approver,creator,updater,manager_status,member_status,has_attachment,audit_status,market_id)
+
+VALUES
+
+(
+now(),
+now(),
+undefined,
+'undefined',
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+福建莆田运动鞋商盟
+INSERT INTO nucc_cop_comgroups (gmt_create,gmt_modified,status,features,name,description,approver,creator,updater,manager_status,member_status,has_attachment,audit_status,market_id)
+
+VALUES
+
+(
+now(),
+now(),
+undefined,
+'undefined',
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+江苏省常熟市服装产业带
+INSERT INTO nucc_cop_comgroups (gmt_create,gmt_modified,status,features,name,description,approver,creator,updater,manager_status,member_status,has_attachment,audit_status,market_id)
+
+VALUES
+
+(
+now(),
+now(),
+undefined,
+'undefined',
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+广东省东莞市虎门女装产业带
+INSERT INTO nucc_cop_comgroups (gmt_create,gmt_modified,status,features,name,description,approver,creator,updater,manager_status,member_status,has_attachment,audit_status,market_id)
+
+VALUES
+
+(
+now(),
+now(),
+undefined,
+'undefined',
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+浙江永康市不锈钢产业带
+INSERT INTO nucc_cop_comgroups (gmt_create,gmt_modified,status,features,name,description,approver,creator,updater,manager_status,member_status,has_attachment,audit_status,market_id)
+
+VALUES
+
+(
+now(),
+now(),
+undefined,
+'undefined',
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+青岛市童床产业带
+INSERT INTO nucc_cop_comgroups (gmt_create,gmt_modified,status,features,name,description,approver,creator,updater,manager_status,member_status,has_attachment,audit_status,market_id)
+
+VALUES
+
+(
+now(),
+now(),
+undefined,
+'undefined',
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+即墨质商盟
+INSERT INTO nucc_cop_comgroups (gmt_create,gmt_modified,status,features,name,description,approver,creator,updater,manager_status,member_status,has_attachment,audit_status,market_id)
+
+VALUES
+
+(
+now(),
+now(),
+undefined,
+'undefined',
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+佛山袜业商盟
+INSERT INTO nucc_cop_comgroups (gmt_create,gmt_modified,status,features,name,description,approver,creator,updater,manager_status,member_status,has_attachment,audit_status,market_id)
+
+VALUES
+
+(
+now(),
+now(),
+undefined,
+'undefined',
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+广东省广州市广州箱包产业带
+INSERT INTO nucc_cop_comgroups (gmt_create,gmt_modified,status,features,name,description,approver,creator,updater,manager_status,member_status,has_attachment,audit_status,market_id)
+
+VALUES
+
+(
+now(),
+now(),
+undefined,
+'undefined',
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+成都市鞋业产业商会
+INSERT INTO nucc_cop_comgroups (gmt_create,gmt_modified,status,features,name,description,approver,creator,updater,manager_status,member_status,has_attachment,audit_status,market_id)
+
+VALUES
+
+(
+now(),
+now(),
+undefined,
+'undefined',
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+广东省潮州市陶瓷产业带
+INSERT INTO nucc_cop_comgroups (gmt_create,gmt_modified,status,features,name,description,approver,creator,updater,manager_status,member_status,has_attachment,audit_status,market_id)
+
+VALUES
+
+(
+now(),
+now(),
+undefined,
+'undefined',
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+山东省青岛市家具产业带
+INSERT INTO nucc_cop_comgroups (gmt_create,gmt_modified,status,features,name,description,approver,creator,updater,manager_status,member_status,has_attachment,audit_status,market_id)
+
+VALUES
+
+(
+now(),
+now(),
+undefined,
+'undefined',
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+汕头市电子商务产业协会（汕头商盟）
+INSERT INTO nucc_cop_comgroups (gmt_create,gmt_modified,status,features,name,description,approver,creator,updater,manager_status,member_status,has_attachment,audit_status,market_id)
+
+VALUES
+
+(
+now(),
+now(),
+undefined,
+'undefined',
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+中山女装商盟
+INSERT INTO nucc_cop_comgroups (gmt_create,gmt_modified,status,features,name,description,approver,creator,updater,manager_status,member_status,has_attachment,audit_status,market_id)
+
+VALUES
+
+(
+now(),
+now(),
+undefined,
+'undefined',
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+浙江省云和县木玩产业带
+INSERT INTO nucc_cop_comgroups (gmt_create,gmt_modified,status,features,name,description,approver,creator,updater,manager_status,member_status,has_attachment,audit_status,market_id)
+
+VALUES
+
+(
+now(),
+now(),
+undefined,
+'undefined',
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+中国质造桐乡鞋业产业带商盟
+INSERT INTO nucc_cop_comgroups (gmt_create,gmt_modified,status,features,name,description,approver,creator,updater,manager_status,member_status,has_attachment,audit_status,market_id)
+
+VALUES
+
+(
+now(),
+now(),
+undefined,
+'undefined',
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+江西省赣州市南康家具产业带
+INSERT INTO nucc_cop_comgroups (gmt_create,gmt_modified,status,features,name,description,approver,creator,updater,manager_status,member_status,has_attachment,audit_status,market_id)
+
+VALUES
+
+(
+now(),
+now(),
+undefined,
+'undefined',
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+佛山家具产业带
+INSERT INTO nucc_cop_comgroups (gmt_create,gmt_modified,status,features,name,description,approver,creator,updater,manager_status,member_status,has_attachment,audit_status,market_id)
+
+VALUES
+
+(
+now(),
+now(),
+undefined,
+'undefined',
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+浙江省诸暨市袜子产业带
+INSERT INTO nucc_cop_comgroups (gmt_create,gmt_modified,status,features,name,description,approver,creator,updater,manager_status,member_status,has_attachment,audit_status,market_id)
+
+VALUES
+
+(
+now(),
+now(),
+undefined,
+'undefined',
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+河南省郑州市女装产业带
+INSERT INTO nucc_cop_comgroups (gmt_create,gmt_modified,status,features,name,description,approver,creator,updater,manager_status,member_status,has_attachment,audit_status,market_id)
+
+VALUES
+
+(
+now(),
+now(),
+undefined,
+'undefined',
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+顺德产业带
+INSERT INTO nucc_cop_comgroups (gmt_create,gmt_modified,status,features,name,description,approver,creator,updater,manager_status,member_status,has_attachment,audit_status,market_id)
+
+VALUES
+
+(
+now(),
+now(),
+undefined,
+'undefined',
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+江苏省海门市家纺产业带
+INSERT INTO nucc_cop_comgroups (gmt_create,gmt_modified,status,features,name,description,approver,creator,updater,manager_status,member_status,has_attachment,audit_status,market_id)
+
+VALUES
+
+(
+now(),
+now(),
+undefined,
+'undefined',
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+中国质造总商盟
+INSERT INTO nucc_cop_comgroups (gmt_create,gmt_modified,status,features,name,description,approver,creator,updater,manager_status,member_status,has_attachment,audit_status,market_id)
+
+VALUES
+
+(
+now(),
+now(),
+undefined,
+'undefined',
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+now(),
+lzeusdeMacBook-Pro:cop_data lzeus$ node ./index.js 
+get
+get
+get
+get
+get
+lzeusdeMacBook-Pro:cop_data lzeus$ node ./index.js 
+get
+get
+get
+get
+get
+lzeusdeMacBook-Pro:cop_data lzeus$ 
