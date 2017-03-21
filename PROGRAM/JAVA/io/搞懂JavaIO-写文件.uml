@@ -4,9 +4,9 @@ title 读文件
 
 SimpleCopy.java -> FileOutputStream.java : write(byte b[], int off, int len)
 
-FileInputStream.java -> FileOutputStream.java : writeBytes(byte b[], int off, int len)
+FileOutputStream.java -> FileOutputStream.java : writeBytes(byte b[], int off, int len)
 
-FileInputStream.java -> FileOutputStream_md.c : Java_java_io_FileOutputStream_writeBytes(JNIEnv *env,jobject this,jbyteArray bytes, jint off, jint len, jboolean append)
+FileOutputStream.java -> FileOutputStream_md.c : Java_java_io_FileOutputStream_writeBytes(JNIEnv *env,jobject this,jbyteArray bytes, jint off, jint len, jboolean append)
 
 FileOutputStream_md.c -> io_util.c : writeBytes(JNIEnv *env, jobject this, jbyteArray bytes,jint off, jint len, jboolean append, jfieldID fid)
 
@@ -20,9 +20,9 @@ io_util.c <-- io_util_md.c : IO_Write/handleWrite(FD fd, const void *buf, jint l
 
 FileOutputStream_md.c <-- io_util.c : writeBytes(JNIEnv *env, jobject this, jbyteArray bytes,jint off, jint len, jboolean append, jfieldID fid)
 
-FileInputStream.java <-- FileOutputStream_md.c: Java_java_io_FileOutputStream_writeBytes(JNIEnv *env,jobject this,jbyteArray bytes, jint off, jint len, jboolean append)
+FileOutputStream.java <-- FileOutputStream_md.c: Java_java_io_FileOutputStream_writeBytes(JNIEnv *env,jobject this,jbyteArray bytes, jint off, jint len, jboolean append)
 
-FileInputStream.java --> FileOutputStream.java : writeBytes(byte b[], int off, int len)
+FileOutputStream.java --> FileOutputStream.java : writeBytes(byte b[], int off, int len)
 
 SimpleCopy.java  <-- FileOutputStream.java : write(byte b[], int off, int len)
 
