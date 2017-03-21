@@ -2,7 +2,7 @@
 
 title 读文件
 
-Client.java -> FileInputStream.java : read(byte b[])
+SimpleCopy.java -> FileInputStream.java : read(byte b[], int off, int len)
 
 FileInputStream.java -> FileInputStream.java : readBytes(byte b[], int off, int len)
 
@@ -24,6 +24,6 @@ FileInputStream.java <-- FileInputStream.c: Java_java_io_FileInputStream_readByt
 
 FileInputStream.java --> FileInputStream.java : readBytes(byte b[], int off, int len)
 
-Client.java  <-- FileInputStream.java : read(byte b[])
+SimpleCopy.java  <-- FileInputStream.java : read(byte b[], int off, int len)
 
 @enduml
