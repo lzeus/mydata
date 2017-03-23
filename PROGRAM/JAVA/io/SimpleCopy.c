@@ -9,6 +9,9 @@
 
 #define MB 1
 
+#define DEF_MODE S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP
+#define DEF_UMASK S_IROTH | S_IWOTH | S_IXOTH
+
 void unix_error(char *msg)
 {	
 	printf("%s: %s\n",msg,strerror(errno));
@@ -28,12 +31,19 @@ int Open(char *pathname,int flag,mode_t mode)
 
 int openSourceFile(char  *sourceFile)
 {
+	//打开一个读文件
+	//没有必要指定文件权限位
 	return Open(sourceFile,O_RDONLY,0);
 }
 
 int openDestFile(char  *destFile)
 {
-	return Open(destFile,O_CREAT | O_TRUNC | O_RDWR ,0);
+	//目的文件
+	//       不存在则新建一个
+	//       存在就截断
+	//       以可读写的方式打开
+	//
+	return Open(destFile,O_CREAT | O_TRUNC | O_RDWR ,DEF_MODE);
 }
 
 ssize_t Read(int fd,void *buf,size_t n)
@@ -71,22 +81,27 @@ void closeFile(int fd)
 }
 
 
+void *Malloc(size_t size)
+{
+	if(!malloc(size))
+	{
+		unix_error("向堆请求字节数组出错");
+	}
+}
+
 
 void doCopy(int srcFd,int destFd)
 {
 	ssize_t num = -1;
 	int n = 1024 * MB;
-	void *buf = malloc(n);
+	void *buf = Malloc(n);
 	while((num = Read(srcFd,buf,n)) >  0)
 	{
 				
 		Write(destFd,buf,(size_t)num);	
 	}
+	free(buf);
 }
-
-
-
-
 
 int main(int argc,char  *argv[])
 {
@@ -95,7 +110,8 @@ int main(int argc,char  *argv[])
 		printf("用法\n SimpleCopy 源文件路径 目的文件路径\n");
 		exit(0);
 	}	
-	
+
+	umask(DEF_UMASK);	
 	int srcFd = openSourceFile(argv[1]);
 	int destFd = openDestFile(argv[2]);
 
