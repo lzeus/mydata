@@ -2,7 +2,7 @@
 
 title 关闭文件
 
-Client.java -> FileInputStream.java : close()
+SimplyCopy.java -> FileInputStream.java : close()
 
 FileInputStream.java -> FileInputStream.java : close0()
 
@@ -20,6 +20,6 @@ FileInputStream.java <-- FileInputStream_md.c : Java_java_io_FileInputStream_clo
 
 FileInputStream.java --> FileInputStream.java : close0()
 
-Client.java  <-- FileInputStream.java : close()
+SimplyCopy.java  <-- FileInputStream.java : close()
 
 @enduml
