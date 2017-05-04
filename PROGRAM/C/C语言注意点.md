@@ -15,3 +15,15 @@ void m(int *const p)
   p = &j;//WRONG 
 }
 ```
+
+###   2. 多维数组的理解
+```c
+int A[5][4];
+
+//等价于
+typedef int int_arr[4]
+int_arr A[5];
+
+T D[R][C]
+&D[i][j] = Address(D) + TLength * (i*C + j)
+```
