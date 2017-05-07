@@ -81,7 +81,7 @@ dd if=/dev/zero of=testfile.src count=1 bs=100M
 #include <sys/stat.h>
 #include <fcntl.h>
 
-#define MB 1
+#define KB 1024
 
 void unix_error(char *msg)
 {	
@@ -98,16 +98,6 @@ int Open(char *pathname,int flag,mode_t mode)
 		unix_error("打开文件错误");
 	}
 	return fd;
-}
-
-int openSourceFile(char  *sourceFile)
-{
-	return Open(sourceFile,O_RDONLY,0);
-}
-
-int openDestFile(char  *destFile)
-{
-	return Open(destFile,O_CREAT | O_TRUNC | O_RDWR ,0);
 }
 
 ssize_t Read(int fd,void *buf,size_t n)
@@ -138,6 +128,16 @@ void Close(int fd)
 	}	
 }
 
+int openSourceFile(char  *sourceFile)
+{
+	return Open(sourceFile,O_RDONLY,0);
+}
+
+int openDestFile(char  *destFile)
+{
+	return Open(destFile,O_CREAT | O_TRUNC | O_RDWR ,0);
+}
+
 void closeFile(int fd)
 {
 	Close(fd);
@@ -146,7 +146,7 @@ void closeFile(int fd)
 void doCopy(int srcFd,int destFd)
 {
 	ssize_t num = -1;
-	int n = 1024 * MB;
+	int n = 1 * KB;
 	//从堆中申请1024个字节作为BUFFER
 	void *buf = Malloc(n);
 	while((num = Read(srcFd,buf,n)) >  0)
