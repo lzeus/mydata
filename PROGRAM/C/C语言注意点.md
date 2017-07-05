@@ -27,3 +27,7 @@ int_arr A[5];
 T D[R][C]
 &D[i][j] = Address(D) + TLength * (i*C + j)
 ```
+
+###   3. linux中cc gcc区别
+which cc 可以看到 cc /usr/bin/cc
+ll /usr/bin/cc 可以看到 /usr/bin/cc -> gcc
