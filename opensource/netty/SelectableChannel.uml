@@ -9,6 +9,7 @@ interface java.nio.channels.Channel <|.. abstract java.nio.channels.spi.Abstract
 abstract java.nio.channels.spi.AbstractInterruptibleChannel <|-- abstract java.nio.channels.SelectableChannel
 
 abstract java.nio.channels.SelectableChannel <|-- abstract java.nio.channels.spi.AbstractSelectableChannel
+java.nio.channels.spi.AbstractSelectableChannel : SelectionKey register(Selector sel, int ops,Object att)
 
 abstract java.nio.channels.spi.AbstractSelectableChannel <|-- abstract java.nio.channels.SocketChannel
 
