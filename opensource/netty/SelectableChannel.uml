@@ -1,0 +1,17 @@
+@startuml
+
+title SelectorChannel
+
+interface java.nio.channels.Channel <|.. abstract java.nio.channels.SelectableChannel
+
+interface java.nio.channels.Channel <|.. abstract java.nio.channels.spi.AbstractInterruptibleChannel
+
+abstract java.nio.channels.spi.AbstractInterruptibleChannel <|-- abstract java.nio.channels.SelectableChannel
+
+abstract java.nio.channels.SelectableChannel <|-- abstract java.nio.channels.spi.AbstractSelectableChannel
+
+abstract java.nio.channels.spi.AbstractSelectableChannel <|-- abstract java.nio.channels.SocketChannel
+
+abstract java.nio.channels.spi.AbstractSelectableChannel <|-- abstract java.nio.channels.ServerSocketChannel
+
+@enduml
