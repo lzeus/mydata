@@ -1,0 +1,35 @@
+@startuml
+title NioEventLoopGroup继承关系图
+
+java.util.concurrent.ScheduledExecutorService <|-- io.netty.util.concurrent.EventExecutorGroup
+
+java.lang.Iterable <|-- io.netty.util.concurrent.EventExecutorGroup
+io.netty.util.concurrent.EventExecutorGroup : EventExecutor next()
+
+io.netty.util.concurrent.EventExecutorGroup <|-- io.netty.util.concurrent.EventExecutor
+io.netty.util.concurrent.EventExecutor : EventExecutorGroup parent()
+io.netty.util.concurrent.EventExecutor : boolean inEventLoop()
+io.netty.util.concurrent.EventExecutor : boolean inEventLoop(Thread thread)
+
+io.netty.util.concurrent.EventExecutorGroup <|-- io.netty.channel.EventLoopGroup
+io.netty.channel.EventLoopGroup : ChannelFuture register(Channel channel)
+io.netty.channel.EventLoopGroup : ChannelFuture register(Channel channel, ChannelPromise promise)
+
+io.netty.util.concurrent.EventExecutor <|-- io.netty.channel.EventLoop
+io.netty.channel.EventLoop : EventLoopGroup parent()
+
+io.netty.channel.EventLoopGroup <|-- io.netty.channel.EventLoop
+
+io.netty.channel.EventLoopGroup <|.. io.netty.channel.MultithreadEventLoopGroup
+ 
+io.netty.channel.MultithreadEventLoopGroup <|-- io.netty.channel.nio.NioEventLoopGroup
+
+io.netty.util.concurrent.MultithreadEventExecutorGroup <|-- io.netty.channel.MultithreadEventLoopGroup
+
+io.netty.channel.MultithreadEventLoopGroup : EventLoop next()
+
+io.netty.util.concurrent.AbstractEventExecutorGroup <|-- io.netty.util.concurrent.MultithreadEventExecutorGroup
+
+io.netty.util.concurrent.EventExecutorGroup <|.. io.netty.util.concurrent.AbstractEventExecutorGroup
+
+@enduml

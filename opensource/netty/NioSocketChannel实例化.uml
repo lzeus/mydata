@@ -1,0 +1,37 @@
+@startuml
+
+title NiSocketChannel实例化
+
+Client -> NioSocketChannel : new NioSocketChannel(SocketChannel socket)
+
+NioSocketChannel -> NioSocketChannel : NioSocketChannel(Channel parent, SocketChannel socket)
+
+NioSocketChannel -> AbstractNioByteChannel : AbstractNioByteChannel(Channel parent, SelectableChannel ch)
+
+AbstractNioByteChannel -> AbstractNioChannel : AbstractNioChannel(Channel parent, SelectableChannel ch, int readInterestOp)
+
+AbstractNioChannel -> AbstractChannel : AbstractChannel(Channel parent)
+
+AbstractChannel -> AbstractChannel : newUnsafe()
+
+AbstractChannel <-- AbstractChannel : newUnsafe()
+
+AbstractChannel -> DefaultChannelPipeline : DefaultChannelPipeline(Channel channel)
+
+AbstractChannel <-- DefaultChannelPipeline : DefaultChannelPipeline(Channel channel)
+
+AbstractNioChannel <-- AbstractChannel : AbstractChannel(Channel parent)
+
+AbstractNioByteChannel <-- AbstractNioChannel : AbstractNioChannel(Channel parent, SelectableChannel ch, int readInterestOp)
+
+NioSocketChannel <-- AbstractNioByteChannel : AbstractNioByteChannel(Channel parent, SelectableChannel ch)
+
+NioSocketChannel -> DefaultSocketChannelConfig : DefaultSocketChannelConfig(SocketChannel channel, Socket javaSocket)
+
+NioSocketChannel <-- DefaultSocketChannelConfig : DefaultSocketChannelConfig(SocketChannel channel, Socket javaSocket)
+
+NioSocketChannel <-- NioSocketChannel : NioSocketChannel(Channel parent, SocketChannel socket)
+
+Client <-- NioSocketChannel : new NioSocketChannel(SocketChannel socket)
+
+@enduml
