@@ -1,0 +1,21 @@
+@startuml
+
+title io.netty.bootstrap.AbstractBootstrap.initAndRegister()
+
+Client -> io.netty.bootstrap.AbstractBootstrap : initAndRegister()
+
+io.netty.bootstrap.AbstractBootstrap -> ChannelFactory : newChannel()
+
+io.netty.bootstrap.AbstractBootstrap <-- ChannelFactory : newChannel()
+
+io.netty.bootstrap.AbstractBootstrap -> io.netty.bootstrap.AbstractBootstrap:init(Channel channel)
+
+io.netty.bootstrap.AbstractBootstrap <-- io.netty.bootstrap.AbstractBootstrap:init(Channel channel)
+
+io.netty.bootstrap.AbstractBootstrap -> io.netty.channel.EventLoopGroup : register(Channel channel, ChannelPromise promise)
+
+io.netty.bootstrap.AbstractBootstrap <-- io.netty.channel.EventLoopGroup : register(Channel channel, ChannelPromise promise)
+
+Client <-- io.netty.bootstrap.AbstractBootstrap : initAndRegister()
+
+@enduml
