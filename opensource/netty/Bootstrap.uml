@@ -1,0 +1,16 @@
+@startuml
+
+title Bootstrap继承结构图
+
+interface java.lang.Cloneable <|.. abstract io.netty.bootstrap.AbstractBootstrap
+io.netty.bootstrap.AbstractBootstrap : private volatile EventLoopGroup group
+io.netty.bootstrap.AbstractBootstrap : private volatile ChannelFactory channelFactory
+io.netty.bootstrap.AbstractBootstrap : private volatile ChannelHandler handler
+
+io.netty.bootstrap.AbstractBootstrap : final ChannelFuture initAndRegister()
+
+abstract io.netty.bootstrap.AbstractBootstrap <|-- io.netty.bootstrap.Bootstrap
+
+abstract io.netty.bootstrap.AbstractBootstrap <|-- io.netty.bootstrap.ServerBootstrap
+
+@enduml
