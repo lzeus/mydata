@@ -1,1 +1,366 @@
+# netty
+## 基于java原生NIO的echo服务
 
+```java
+import com.lzeus.common.Logger;
+
+import java.io.IOException;
+import java.net.InetSocketAddress;
+import java.net.ServerSocket;
+import java.nio.ByteBuffer;
+import java.nio.channels.SelectionKey;
+import java.nio.channels.Selector;
+import java.nio.channels.ServerSocketChannel;
+import java.nio.channels.SocketChannel;
+import java.util.Iterator;
+import java.util.Set;
+
+public class EchoNioServer {
+
+    private static Logger logger = Logger.getLogger();
+    /**
+     * 初始化ServerSocketChannel
+     * 注册其相关操作到seletor
+     * @param selector
+     * @param port
+     */
+    public static void initAndRegisterServer(Selector selector,int port){
+        try{
+            ServerSocketChannel serverChannel = ServerSocketChannel.open();
+            serverChannel.configureBlocking(false);
+            ServerSocket serverSocket = serverChannel.socket();
+            serverSocket.bind(new InetSocketAddress(port));
+
+            serverChannel.register(selector, SelectionKey.OP_ACCEPT);
+        }catch (IOException e){
+            logger.error("初始化在端口["+port+"]上的监听服务出错",e);
+        }
+    }
+    /**
+     * accept客户端求
+     * 初始化客户端channel
+     * 注册其相关操作到selector
+     * @param selector
+     * @param selectionKey
+     */
+    public static void acceptAndRegisterClient(Selector selector,SelectionKey selectionKey){
+        if(!selectionKey.isValid() || !selectionKey.isAcceptable()){
+            return;
+        }
+
+        ServerSocketChannel serverChannel = (ServerSocketChannel)selectionKey.channel();
+        try{
+            SocketChannel clientChannel = serverChannel.accept();
+            clientChannel.configureBlocking(false);
+            clientChannel.register(selector,SelectionKey.OP_READ | SelectionKey.OP_WRITE, ByteBuffer.allocate(1024));
+        }catch (IOException e){
+            logger.error("监听服务["+serverChannel.socket()+"]accept出错",e);
+        }
+    }
+    /**
+     * 客户端读
+     * @param selectionKey
+     */
+    public static void clientRead(SelectionKey selectionKey){
+
+        if(!selectionKey.isValid() || !selectionKey.isReadable()){
+            return;
+        }
+
+        SocketChannel clientChannel = (SocketChannel)selectionKey.channel();
+        ByteBuffer buffer = (ByteBuffer)selectionKey.attachment();
+        if(buffer != null){
+            try{
+                clientChannel.read(buffer);
+            }catch (IOException e){
+                logger.error("从client["+clientChannel.socket()+"]读取数据出错",e);
+
+                closeSocketChannel(clientChannel);
+            }
+        }
+    }
+    /**
+     * 客户端写
+     * @param selectionKey
+     */
+    public static void clientWrite(SelectionKey selectionKey){
+        if(!selectionKey.isValid() || !selectionKey.isWritable()){
+            return;
+        }
+
+        SocketChannel clientChannel = (SocketChannel)selectionKey.channel();
+        ByteBuffer buffer = (ByteBuffer)selectionKey.attachment();
+        if(buffer != null){
+            buffer.flip();
+            try{
+                clientChannel.write(buffer);
+            }catch (IOException e){
+                logger.error("从client["+clientChannel.socket()+"]读取数据出错",e);
+
+                closeSocketChannel(clientChannel);
+            }
+            buffer.compact();
+        }
+    }
+
+    static void closeSocketChannel(SocketChannel socketChannel){
+        if(socketChannel != null){
+            try{
+                socketChannel.close();
+            }catch (IOException e){
+
+            }
+        }
+    }
+
+    static void closeSelector(Selector selector){
+        if(selector != null){
+            try{
+                selector.close();
+            }catch (IOException e){
+
+            }
+        }
+    }
+    /**
+     * 
+     * 打开 nio selector
+     * @return
+     */
+    static Selector openSelector(){
+        Selector selector = null;
+        try{
+            selector = Selector.open();
+        }catch (IOException e){
+            logger.error("新建selector出错",e);
+            System.exit(1);
+        }
+        return selector;
+    }
+
+    static void doSelect(Selector selector){
+        while(true){
+            try{
+                selector.select();
+            }catch (IOException e){
+                logger.error("selector出错",e);
+                closeSelector(selector);
+                return;
+            }
+            Set<SelectionKey> selectionKeys = selector.selectedKeys();
+            Iterator<SelectionKey> keyIterator = selectionKeys.iterator();
+
+            while(keyIterator.hasNext()){
+                try{
+                    SelectionKey selectionKey = keyIterator.next();
+                    acceptAndRegisterClient(selector,selectionKey);
+                    clientRead(selectionKey);
+                    clientWrite(selectionKey);
+                }finally {
+                    keyIterator.remove();
+                }
+            }
+        }
+    }
+
+    public static void serve(int port){
+        Selector selector = openSelector();
+        initAndRegisterServer(selector,port);
+        doSelect(selector);
+    }
+
+
+    public static void main(String args[]){
+        serve(1111);
+    }
+
+}
+```
+
+- ServerSocketChannel 和 SocketChannel
+
+  java.nio.channels.ServerSocketChannel和java.nio.channels.SocketChannel分别代表服务socket通道和socket通道，他们继承了公共的父类AbstractSelectableChannel，关系如下：
+
+  ![SelectorChannel继承关系](https://github.com/lzeus/mydata/raw/master/opensource/netty/SelectableChannel.png)
+
+
+  java.nio.channels.spi.AbstractSelectableChannel实现了java.nio.channels.SelectableChannel接口，SelectableChannel的具体实现类代表的是一种可注册Selector选择器的通道。
+  
+  注册的功能在register方法中实现，jdk源码如下：
+  
+  ```java
+  /**
+     * Registers this channel with the given selector, returning a selection key.
+     *
+     * <p>  This method first verifies that this channel is open and that the
+     * given initial interest set is valid.
+     *
+     * <p> If this channel is already registered with the given selector then
+     * the selection key representing that registration is returned after
+     * setting its interest set to the given value.
+     *
+     * <p> Otherwise this channel has not yet been registered with the given
+     * selector, so the {@link AbstractSelector#register register} method of
+     * the selector is invoked while holding the appropriate locks.  The
+     * resulting key is added to this channel's key set before being returned.
+     * </p>
+     * 
+     * @throws  ClosedSelectorException {@inheritDoc}
+     *
+     * @throws  IllegalBlockingModeException {@inheritDoc}
+     *
+     * @throws  IllegalSelectorException {@inheritDoc}
+     *
+     * @throws  CancelledKeyException {@inheritDoc}
+     *
+     * @throws  IllegalArgumentException {@inheritDoc}
+     */
+    public final SelectionKey register(Selector sel, int ops,
+                                       Object att)
+        throws ClosedChannelException
+    {
+        synchronized (regLock) {
+            if (!isOpen())
+                throw new ClosedChannelException();
+            if ((ops & ~validOps()) != 0)
+                throw new IllegalArgumentException();
+            if (blocking)
+                throw new IllegalBlockingModeException();
+            SelectionKey k = findKey(sel);
+            //已注册过的SelectaleChannel
+            if (k != null) {
+                //更新感兴趣的操作集位
+                k.interestOps(ops);
+                //更新附属对象
+                k.attach(att);
+            }
+            //新注册的SelectaleChannel
+            if (k == null) {
+                // New registration
+                synchronized (keyLock) {
+                    if (!isOpen())
+                        throw new ClosedChannelException();
+                    //调用的AbstractSelector的register
+                    k = ((AbstractSelector)sel).register(this, ops, att);
+                    addKey(k);
+                }
+            }
+            return k;
+        }
+    }
+  ```
+     
+  需要注意的是，SelectableChannel的register方法实际的注册动作，是调用第一个参数Selector的具体实现类的register方法完成的。
+
+- Selector
+
+  该选择器用于多通道的I/O多路复用，SelectableChannel注册时，作为register的第一个参数其select方法用于检索注册通道感兴趣的操作是否发生。
+
+  `public int select()`
+  
+   一直阻塞，直到至少有一个注册的Channel上有事件发生，返回结果为相关事件的key的个数或者0。
+  
+  `public int select(long timeout)`
+  
+  一直阻塞，直到至少有一个注册的Channel上有事件发生或者传入的时间到了，返回结果为相关事件的key的个数或者0。
+
+  `public int selectNow()`
+  
+  立即返回，返回结果为相关事件的key的个数或者0。
+
+
+对于ServerSocketChannel，我们关注它的`SelectionKey.OP_ACCEPT`事件。
+
+对于SocketChannel，我们关注它的可读事件`SelectionKey.OP_READ`和可写事件`SelectionKey.OP_WRIT`。
+
+ServerSocketChannel和SocketChannel的java.nio.channels.Selector
+## 基于netty的NIO实现的echo服务
+### 示例代码
+```java
+import com.lzeus.common.Logger;
+import io.netty.bootstrap.ServerBootstrap;
+import io.netty.buffer.ByteBuf;
+import io.netty.buffer.Unpooled;
+import io.netty.channel.*;
+import io.netty.channel.nio.NioEventLoopGroup;
+import io.netty.channel.socket.SocketChannel;
+import io.netty.channel.socket.nio.NioServerSocketChannel;
+
+import java.net.InetSocketAddress;
+
+public class EchoNettyServer {
+
+    private static Logger logger = Logger.getLogger();
+
+    public static void serve(int port) throws Exception{
+        EventLoopGroup group = new NioEventLoopGroup();
+        ServerBootstrap bootstrap = new ServerBootstrap();
+        bootstrap
+                .group(group)
+                .channel(NioServerSocketChannel.class)
+                .localAddress(new InetSocketAddress(port))
+                .childHandler(new ChannelInitializer<SocketChannel>() {
+                    @Override
+                    protected void initChannel(final SocketChannel socketChannel) throws Exception {
+                        socketChannel.pipeline().addLast(new ChannelInboundHandlerAdapter(){
+                            @Override
+                            public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+                                if(msg instanceof ByteBuf && msg != null){
+                                    String s = ButeBufUtil.stringfy((ByteBuf)(msg));
+                                    logger.info("服务器收到("+s.length()+"):["+s+"]");
+                                }
+                                ctx.write(msg);
+                            }
+
+                            @Override
+                            public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
+                                ctx
+                                        .writeAndFlush(Unpooled.EMPTY_BUFFER);
+                                        //.addListener(ChannelFutureListener.CLOSE);
+                            }
+
+                            @Override
+                            public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+
+                            }
+                        });
+                    }
+                });
+
+        ChannelFuture future = bootstrap.bind().sync();
+
+        future.channel().closeFuture().sync();
+    }
+
+    public static void main(String args[]) throws Exception{
+        serve(1111);
+    }
+}
+```
+## 初识EventLoopGroup
+### 继承关系
+![EventLooGroup关系](https://github.com/lzeus/mydata/raw/master/opensource/netty/Nio事件线程池继承关系.png)
+
+#### io.netty.util.concurrent
+- EventExecutorGroup
+  - 继承了ScheduledExecutorService接口
+     - 使得实现类具备的线程组的能力
+  - 定义了EventExecutor next()接口
+     - 使得实现类具备了返回EventExecutor实例的能力
+- EventExecutor
+   -  EventExecutorGroup parent()
+     - 获取当前EventExecutor实例所属的EventExecutorGroup
+   - boolean inEventLoop()
+     - 判断调用该方法的执行流线程是否是事件循环线程
+   - boolean inEventLoop(Thread thread)
+     - 判断参数thread表示的线程是否是事件循环线程
+
+#### io.netty.channel
+- EventLoop
+  - EventLoopGroup parent()
+     - 返回该对象所属的EventLoopGroup实例
+- EventLoopGroup
+  - ChannelFuture register(Channel channel)
+     - 注册channel到当前EventLoopGroup
+     - 内部实现会调用next()返回一个EventLoop，并调用该EventLoop实例的register方法
+  - ChannelFuture register(Channel channel, ChannelPromise promise)

@@ -1,0 +1,21 @@
+@startuml
+
+title Serverbootstrap.bind()
+
+EchoNettyServer -> Serverbootstrap : bind()
+
+Serverbootstrap -> AbstractServerbootstrap : doBind(SocketAddress localAddress)
+
+AbstractServerbootstrap -> AbstractServerbootstrap : initAndRegister()
+
+AbstractServerbootstrap -> Serverbootstrap : init(Channel channel)
+
+AbstractServerbootstrap <-- Serverbootstrap : init(Channel channel)
+
+AbstractServerbootstrap <-- AbstractServerbootstrap : initAndRegister()
+
+Serverbootstrap <-- AbstractServerbootstrap : doBind(SocketAddress localAddress)
+
+EchoNettyServer <-- Serverbootstrap : bind()
+
+@enduml

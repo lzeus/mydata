@@ -1,0 +1,16 @@
+@startuml
+
+title Selector
+
+abstract java.nio.channels.Selector <|-- abstract java.nio.channels.spi.AbstractSelector
+java.nio.channels.spi.AbstractSelector : SelectionKey register(AbstractSelectableChannel ch,int ops, Object att)
+
+abstract java.nio.channels.spi.AbstractSelector <|-- abstract sun.nio.ch.SelectorImpl
+
+abstract sun.nio.ch.SelectorImpl <|-- abstract sun.nio.ch.AbstractPollSelectorImpl
+
+abstract sun.nio.ch.AbstractPollSelectorImpl <|-- sun.nio.ch.PollSelectorImpl
+
+abstract sun.nio.ch.SelectorImpl <|-- sun.nio.ch.KQueueSelectorImpl
+
+@enduml
