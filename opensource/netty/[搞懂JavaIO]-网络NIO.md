@@ -363,30 +363,3 @@ public class EchoNettyServer {
     }
 }
 ```
-## 初识EventLoopGroup
-### 继承关系
-![EventLooGroup关系](https://github.com/lzeus/mydata/raw/master/opensource/netty/Nio事件线程池继承关系.png)
-
-#### io.netty.util.concurrent
-- EventExecutorGroup
-  - 继承了ScheduledExecutorService接口
-     - 使得实现类具备的线程组的能力
-  - 定义了EventExecutor next()接口
-     - 使得实现类具备了返回EventExecutor实例的能力
-- EventExecutor
-   -  EventExecutorGroup parent()
-     - 获取当前EventExecutor实例所属的EventExecutorGroup
-   - boolean inEventLoop()
-     - 判断调用该方法的执行流线程是否是事件循环线程
-   - boolean inEventLoop(Thread thread)
-     - 判断参数thread表示的线程是否是事件循环线程
-
-#### io.netty.channel
-- EventLoop
-  - EventLoopGroup parent()
-     - 返回该对象所属的EventLoopGroup实例
-- EventLoopGroup
-  - ChannelFuture register(Channel channel)
-     - 注册channel到当前EventLoopGroup
-     - 内部实现会调用next()返回一个EventLoop，并调用该EventLoop实例的register方法
-  - ChannelFuture register(Channel channel, ChannelPromise promise)

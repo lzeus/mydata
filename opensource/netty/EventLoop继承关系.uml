@@ -17,6 +17,12 @@ io.netty.channel.EventLoopGroup : ChannelFuture register(Channel channel, Channe
 interface io.netty.util.concurrent.EventExecutorGroup <|.. abstract io.netty.util.concurrent.AbstractEventExecutorGroup
 
 abstract io.netty.util.concurrent.AbstractEventExecutorGroup <|-- abstract io.netty.util.concurrent.MultithreadEventExecutorGroup
+io.netty.util.concurrent.MultithreadEventExecutorGroup : private final EventExecutor[] children
+io.netty.util.concurrent.MultithreadEventExecutorGroup : private final AtomicInteger childIndex
+io.netty.util.concurrent.MultithreadEventExecutorGroup : private final AtomicInteger terminatedChildren
+io.netty.util.concurrent.MultithreadEventExecutorGroup : private final Promise<?> terminationFuture
+
+io.netty.util.concurrent.MultithreadEventExecutorGroup : public EventExecutor next()
 
 abstract io.netty.util.concurrent.MultithreadEventExecutorGroup <|-- abstract io.netty.channel.MultithreadEventLoopGroup
 
