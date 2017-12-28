@@ -1,0 +1,33 @@
+@startuml
+
+title ChannelPipeline and ChannelHandlerContext
+
+interface java.lang.Iterable <|-- interface io.netty.channel.ChannelPipeline
+
+interface io.netty.channel.ChannelOutboundInvoker <|-- interface io.netty.channel.ChannelPipeline
+
+interface io.netty.channel.ChannelInboundInvoker <|-- interface io.netty.channel.ChannelPipeline 
+
+interface io.netty.channel.ChannelPipeline <|.. io.netty.channel.DefaultChannelPipeline
+
+io.netty.channel.DefaultChannelPipeline : final Channel channel
+io.netty.channel.DefaultChannelPipeline : final DefaultChannelHandlerContext head
+io.netty.channel.DefaultChannelPipeline : final DefaultChannelHandlerContext tail
+
+
+
+interface io.netty.channel.ChannelInboundInvoker <|-- interface io.netty.channel.ChannelHandlerContext
+
+interface io.netty.channel.ChannelOutboundInvoker <|-- interface io.netty.channel.ChannelHandlerContext
+
+interface io.netty.channel.ChannelPropertyAccess <|-- interface io.netty.channel.ChannelHandlerContext
+
+interface io.netty.util.AttributeMap <|-- interface io.netty.channel.ChannelHandlerContext
+
+interface io.netty.channel.ChannelHandlerContext <|.. io.netty.channel.DefaultChannelHandlerContext
+
+interface io.netty.util.AttributeMap <|-- io.netty.util.DefaultAttributeMap
+
+io.netty.util.DefaultAttributeMap <|-- io.netty.channel.DefaultChannelHandlerContext
+
+@enduml
