@@ -7,6 +7,7 @@ interface java.lang.Iterable <|-- interface io.netty.channel.ChannelPipeline
 interface io.netty.channel.ChannelOutboundInvoker <|-- interface io.netty.channel.ChannelPipeline
 
 interface io.netty.channel.ChannelInboundInvoker <|-- interface io.netty.channel.ChannelPipeline 
+io.netty.channel.ChannelPipeline : Channel channel()
 
 interface io.netty.channel.ChannelPipeline <|.. io.netty.channel.DefaultChannelPipeline
 
@@ -15,10 +16,37 @@ io.netty.channel.DefaultChannelPipeline : final DefaultChannelHandlerContext hea
 io.netty.channel.DefaultChannelPipeline : final DefaultChannelHandlerContext tail
 
 
-
 interface io.netty.channel.ChannelInboundInvoker <|-- interface io.netty.channel.ChannelHandlerContext
+io.netty.channel.ChannelInboundInvoker : ChannelInboundInvoker fireChannelRegistered()
+io.netty.channel.ChannelInboundInvoker : ChannelInboundInvoker fireChannelUnregistered()
+io.netty.channel.ChannelInboundInvoker : ChannelInboundInvoker fireChannelActive()
+io.netty.channel.ChannelInboundInvoker : ChannelInboundInvoker fireChannelInactive()
+io.netty.channel.ChannelInboundInvoker : ChannelInboundInvoker fireExceptionCaught(Throwable cause)
+io.netty.channel.ChannelInboundInvoker : ChannelInboundInvoker fireUserEventTriggered(Object event)
+io.netty.channel.ChannelInboundInvoker : ChannelInboundInvoker fireChannelRead(Object msg)
+io.netty.channel.ChannelInboundInvoker : ChannelInboundInvoker fireChannelReadComplete()
+io.netty.channel.ChannelInboundInvoker : ChannelInboundInvoker fireChannelWritabilityChanged()
+
 
 interface io.netty.channel.ChannelOutboundInvoker <|-- interface io.netty.channel.ChannelHandlerContext
+io.netty.channel.ChannelOutboundInvoker : ChannelFuture bind(SocketAddress localAddress)
+io.netty.channel.ChannelOutboundInvoker : ChannelFuture connect(SocketAddress remoteAddress)
+io.netty.channel.ChannelOutboundInvoker : ChannelFuture connect(SocketAddress remoteAddress, SocketAddress localAddress)
+io.netty.channel.ChannelOutboundInvoker : ChannelFuture disconnect()
+io.netty.channel.ChannelOutboundInvoker : ChannelFuture close()
+io.netty.channel.ChannelOutboundInvoker : ChannelFuture deregister()
+io.netty.channel.ChannelOutboundInvoker : ChannelFuture bind(SocketAddress localAddress, ChannelPromise promise)
+io.netty.channel.ChannelOutboundInvoker : ChannelFuture connect(SocketAddress remoteAddress, ChannelPromise promise)
+io.netty.channel.ChannelOutboundInvoker : ChannelFuture connect(SocketAddress remoteAddress, SocketAddress localAddress, ChannelPromise promise)
+io.netty.channel.ChannelOutboundInvoker : ChannelFuture disconnect(ChannelPromise promise)
+io.netty.channel.ChannelOutboundInvoker : ChannelFuture close(ChannelPromise promise)
+io.netty.channel.ChannelOutboundInvoker : ChannelFuture deregister(ChannelPromise promise)
+io.netty.channel.ChannelOutboundInvoker : ChannelOutboundInvoker read()
+io.netty.channel.ChannelOutboundInvoker : ChannelFuture write(Object msg)
+io.netty.channel.ChannelOutboundInvoker : ChannelFuture write(Object msg, ChannelPromise promise)
+io.netty.channel.ChannelOutboundInvoker : ChannelOutboundInvoker flush()
+io.netty.channel.ChannelOutboundInvoker : ChannelFuture writeAndFlush(Object msg, ChannelPromise promise)
+io.netty.channel.ChannelOutboundInvoker : ChannelFuture writeAndFlush(Object msg)
 
 interface io.netty.channel.ChannelPropertyAccess <|-- interface io.netty.channel.ChannelHandlerContext
 
@@ -29,5 +57,28 @@ interface io.netty.channel.ChannelHandlerContext <|.. io.netty.channel.DefaultCh
 interface io.netty.util.AttributeMap <|-- io.netty.util.DefaultAttributeMap
 
 io.netty.util.DefaultAttributeMap <|-- io.netty.channel.DefaultChannelHandlerContext
+io.netty.channel.DefaultChannelHandlerContext : volatile DefaultChannelHandlerContext next
+io.netty.channel.DefaultChannelHandlerContext : volatile DefaultChannelHandlerContext prev;
+io.netty.channel.DefaultChannelHandlerContext : private final Channel channel
+io.netty.channel.DefaultChannelHandlerContext : private final DefaultChannelPipeline pipeline
+io.netty.channel.DefaultChannelHandlerContext : private final String name
+io.netty.channel.DefaultChannelHandlerContext : private final ChannelHandler handler
+io.netty.channel.DefaultChannelHandlerContext : private boolean removed
+io.netty.channel.DefaultChannelHandlerContext : final EventExecutor executor
+
+
+
+
+interface io.netty.channel.ChannelHandler <|-- interface io.netty.channel.ChannelInboundHandler
+interface io.netty.channel.ChannelHandler <|-- interface io.netty.channel.ChannelOutboundHandler
+
+interface io.netty.channel.ChannelHandler <|.. io.netty.channel.ChannelHandlerAdapter
+
+io.netty.channel.ChannelHandlerAdapter <|-- io.netty.channel.ChannelInboundHandlerAdapter
+io.netty.channel.ChannelInboundHandler <|.. io.netty.channel.ChannelInboundHandlerAdapter
+
+
+io.netty.channel.ChannelHandlerAdapter <|-- io.netty.channel.ChannelOutboundHandlerAdapter
+io.netty.channel.ChannelOutboundHandler <|.. io.netty.channel.ChannelOutboundHandlerAdapter
 
 @enduml
